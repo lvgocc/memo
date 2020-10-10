@@ -1,0 +1,10 @@
+#lvgo_memo_block{
+    position: fixed;
+    left: 0;
+    top: 200px;
+    background: #3388ff;
+    padding: 10px;
+    box-shadow: 0 0 10px #002761;
+    border-radius: 3px;
+    color: white;
+}

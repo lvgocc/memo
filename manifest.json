@@ -1,0 +1,50 @@
+{
+  "manifest_version": 2,
+  "name": "备忘录",
+  "version": "1.0",
+  "description": "一个有灵魂的备忘录，比你更懂你自己。by lvgo",
+  "author": "lvgo",
+  "homepage_url": "http://lvgo.org",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/content-script.js"
+      ],
+      "css": [
+        "css/memo.css"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "js/memo.js"
+  ],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "一个有灵魂的备忘录，比你更懂你自己。"
+  },
+  "chrome_url_overrides": {
+    "newtab": "override/override.html"
+  }
+}

@@ -1,0 +1,1 @@
+console.log("this info show of chrome-extension-memo web_accessible_resources memo.js");

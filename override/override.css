@@ -1,0 +1,10 @@
+body {
+    background-color: skyblue;
+}
+
+#lvgo-memo-line {
+    width: 100%;
+    min-height: 60px;
+    background-color: azure;
+    text-align: center;
+}
