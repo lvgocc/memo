@@ -5,31 +5,34 @@
     <title>override</title>
     <link rel="stylesheet" href="override.css">
     <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../js/md5.js"></script>
 </head>
 <body>
-<div id="lvgo-memo-line">
-
+<div id="memo">
+    <div class="layui-row ">
+        <div class="layui-col-xs12" id="translate_query_area">
+            <textarea id="translate-query" placeholder="输入文字开始翻译..."></textarea>
+            <button class="layui-btn layui-btn-xs  layui-btn-normal layui-btn-radius" id="translate-button"
+                    type="button"><i
+                    class="layui-icon layui-icon-survey"></i>
+                翻译
+            </button>
+            <button class="layui-btn layui-btn-xs  layui-btn-normal layui-btn-radius" id="translate_clear"
+                    type="button"><i
+                    class="layui-icon layui-icon-close"></i>
+                清空
+            </button>
+        </div>
+        <div class="layui-col-xs12">
+            <div id="translate-result"></div>
+        </div>
+        <div class="layui-row ">
+            <div class="layui-col-xs12">
+                <table id="memo_table" lay-skin="line"></table>
+            </div>
+        </div>
+    </div>
 </div>
-
-<table id="lvgo_memo_table" class="layui-table">
-    <colgroup>
-        <col width="150">
-        <col width="200">
-        <col>
-    </colgroup>
-    <thead>
-    <tr>
-        <th>日期</th>
-        <th>站点名称</th>
-        <th>备忘内容</th>
-        <th>站点地址</th>
-    </tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
-
-
 <script src="../js/jquery-3.5.1.min.js"></script>
 <script src="../layui/layui.js"></script>
 <script type="text/javascript" src="override.js"></script>

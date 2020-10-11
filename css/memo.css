@@ -1,4 +1,4 @@
-#lvgo_memo_block{
+#lvgo_memo_block {
     position: fixed;
     left: 0;
     top: 200px;
@@ -7,4 +7,30 @@
     box-shadow: 0 0 10px #002761;
     border-radius: 3px;
     color: white;
+}
+
+
+#lvgo_memo_tip_bg {
+    height: 100%;
+    width: 100%;
+    background: #9F9F9F;
+    opacity: 0.4;
+}
+
+
+.lvgo-memo-add-success {
+    position: fixed;
+    left: -500px;
+    padding: 10px 10px;
+    top: 30px;
+    color: white;
+    min-width: 120px;
+    max-width: 700px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    background-image: linear-gradient(to bottom, #3d8aff, #3e8aff);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    transition: left .4s;
+    z-index: 99999999;
 }

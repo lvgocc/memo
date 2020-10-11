@@ -1,10 +1,30 @@
-body {
-    background-color: skyblue;
+a {
+    cursor: pointer;
 }
 
-#lvgo-memo-line {
+#memo {
+    margin: 20px 200px 20px 200px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+#translate-result {
+    margin: 10px;
+}
+
+#translate_query_area {
+    padding: 10px;
+    border: 1px solid #9F9F9F;
+}
+
+#translate_query_area:hover {
+    border: 1px solid #1E9FFF;
+}
+
+#translate-query {
+    height: auto;
+    border: 0;
+    resize: none;
     width: 100%;
-    min-height: 60px;
-    background-color: azure;
-    text-align: center;
+    overflow: hidden;
 }
