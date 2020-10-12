@@ -32,6 +32,7 @@
     ]
   },
   "permissions": [
+    "bookmarks",
     "history",
     "contextMenus",
     "tabs",

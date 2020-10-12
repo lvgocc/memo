@@ -53,11 +53,9 @@ function addMemo(onClickData) {
             // 通过 getSelected 选择当前活动的 tab 页面，获取 tab 页信息
             chrome.tabs.getSelected(null, (tab) => {
                 chrome.tabs.get(tab.id, (tabInfo) => {
-                    const tab = tabInfo;
                     const memoItem = {
-                        "title": tab.title || '新增备忘',
                         "date": new Date().toLocaleString(),
-                        "url": tab.url || '',
+                        "url": tabInfo.url || '',
                         "memo": onClickData.selectionText,
                         "scrollTop": response || 0
                     };
@@ -90,11 +88,33 @@ title: '使用Baidu搜索：“%s”',
         );
     }
  */
+//
+// chrome.contextMenus.create({
+//     title: "添加选中内容至备忘录",
+//     contexts: ['selection'],
+//     onclick: function (onClickData) {
+//         addMemo(onClickData);
+//     }
+// });
 
-chrome.contextMenus.create({
-    title: "添加选中内容至备忘录",
-    contexts: ['selection'],
-    onclick: function (onClickData) {
-        addMemo(onClickData);
-    }
+
+/**
+ * 监听扩展图标单击事件
+ */
+chrome.browserAction.onClicked.addListener(function (tab) {
+    // 在該 chrome tabs 上執行 contentScript.js 這隻檔案
+    // chrome.tabs.executeScript(null, { file: 'contentScript.bundle.js' });
+    chrome.tabs.create(
+        {url: 'chrome-extension://acikidmnacdkgfallhcflnbgkflefmdh/override/override.html'}
+    );
+});
+
+
+chrome.extension.onConnect.addListener(function (port) {
+    // console.log('port.name = ' + port.name);
+    port.onMessage.addListener(function (msg) {
+        // console.log('msg = ' + msg);
+        // 发送消息
+        port.postMessage('连接成功。。。。');
+    });
 });

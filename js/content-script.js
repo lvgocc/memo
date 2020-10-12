@@ -7,6 +7,9 @@
 
 console.log('this info show of chrome-extension-memo content-script.js , follow me https://github.com/lvgocc');
 
+/**
+ * dom 加载完成事件监听
+ */
 document.addEventListener('DOMContentLoaded', () => {
     // google 的超链接问题
     if (location.host === 'www.google.com') {
@@ -46,7 +49,7 @@ var tipCount = 0;
 
 function showTip(info) {
     info = info || '';
-    info += '添加成功';
+    info += ' 添加成功';
     var ele = document.createElement('div');
     ele.className = 'lvgo-memo-add-success';
     ele.style.top = tipCount * 70 + 20 + 'px';
@@ -57,11 +60,11 @@ function showTip(info) {
     setTimeout(() => {
         ele.style.left = '20px';
         setTimeout(() => {
-            ele.style.left = '-500px';
+            ele.style.left = '-800px';
             setTimeout(() => {
                 ele.remove();
                 tipCount--;
-            }, 2000);
+            }, 1000);
         }, 2000)
     }, 0);
 }
@@ -71,7 +74,6 @@ chrome.extension.onRequest.addListener(
         console.log(sender.tab ?
             "from a content script:" + sender.tab.url :
             "from the extension");
-        console.dir(request)
         let result;
         if (request) {
             switch (request.type) {
@@ -79,7 +81,7 @@ chrome.extension.onRequest.addListener(
                     result = document.body.scrollTop || document.documentElement.scrollTop;
                     break;
                 case 1:
-                    showTip()
+                    showTip();
                     break
             }
         }
@@ -99,3 +101,58 @@ setTimeout(() => {
         })
     });
 }, 1000);
+
+
+var port = chrome.extension.connect({name: "knockknock"});
+port.postMessage('connection to background');
+port.onMessage.addListener(function (msg) {
+    // console.log('msg = ' + msg);
+});
+
+/**
+ * 监听选择内容，增加到备忘录
+ */
+document.addEventListener('mouseup', (e) => {
+    var text;
+    if (window.getSelection) {
+        text = window.getSelection().toString();
+    } else if (document.selection) {
+        text = document.selection.createRange().text;
+    }
+    var element = document.getElementById('selected_memo');
+    if (text && text.length > 2) {
+        if (element) element.remove();
+
+        var memoBlock = document.createElement('div');
+        memoBlock.id = 'selected_memo';
+        memoBlock.style.left = e.x + 5 + 'px';
+        memoBlock.style.top = e.y + 15 + 'px';
+        memoBlock.innerHTML = '添加到备忘录';
+        document.body.appendChild(memoBlock);
+
+        memoBlock.addEventListener("click", function () {
+            const memoItem = {
+                "date": new Date().toLocaleString(),
+                "url": location.href,
+                "memo": text,
+                "scrollTop": document.body.scrollTop || document.documentElement.scrollTop || 0
+            };
+            saveMemoToChromeStorage(memoItem);
+            memoBlock.remove()
+        });
+    } else {
+        setTimeout(() => {
+            if (element) element.remove()
+        }, 10)
+    }
+});
+
+function saveMemoToChromeStorage(memoItem) {
+    const memo = [];
+    chrome.storage.sync.get('memo', (result) => {
+        if (!result.memo) result.memo = memo;
+        result.memo.push(memoItem);
+        chrome.storage.sync.set(result);
+    });
+    showTip(memoItem.memo)
+}

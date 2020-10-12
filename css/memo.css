@@ -6,22 +6,27 @@
     padding: 10px;
     box-shadow: 0 0 10px #002761;
     border-radius: 3px;
+    font-size: 12px !important;
     color: white;
+    z-index: 99999999;
 }
 
-
-#lvgo_memo_tip_bg {
-    height: 100%;
-    width: 100%;
-    background: #9F9F9F;
-    opacity: 0.4;
+#selected_memo {
+    cursor: pointer;
+    position: fixed;
+    background: #3388ff;
+    padding: 6px;
+    box-shadow: 0 0 5px #002761;
+    border-radius: 3px;
+    color: white;
+    font-size: 12px !important;
 }
 
 
 .lvgo-memo-add-success {
     position: fixed;
     left: -500px;
-    padding: 10px 10px;
+    padding: 16px;
     top: 30px;
     color: white;
     min-width: 120px;
@@ -31,6 +36,6 @@
     font-size: 16px;
     background-image: linear-gradient(to bottom, #3d8aff, #3e8aff);
     box-shadow: 0 0 5px rgba(0, 0, 0, .3);
-    transition: left .4s;
+    transition: left .5s;
     z-index: 99999999;
 }
