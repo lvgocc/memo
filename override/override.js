@@ -1,7 +1,7 @@
 console.log('this info show of chrome-extension-memo override override.js , follow me https://github.com/lvgocc');
 
 
-layer.msg('越来越懂你');
+// layer.msg('越来越懂你');
 
 
 /**
@@ -165,8 +165,29 @@ chrome.storage.sync.get('firstTime', (result) => {
 });
 
 // 访问历史分析
-chrome.history.search({'text': '', 'maxResults': 200}, (e) => {
-    e.forEach((e, index) => {
-        console.log(index + '- ' + e.visitCount + ':' + e.url)
-    })
-});
+// chrome.history.search({'text': '', 'maxResults': 200}, (e) => {
+//     e.forEach((e, index) => {
+//         console.log(index + '- ' + e.visitCount + ':' + e.url)
+//     })
+// });
+
+
+function setMemoBg(data) {
+    console.dir(data);
+    let bingImage = 'https://cn.bing.com' + data.images[0].url;
+    var memoBg = document.getElementById('memo-bg');
+    memoBg.style.height = $(window).height() + 'px';
+    memoBg.style.backgroundImage = "url(" + bingImage + ")";
+}
+
+// 扩展使用 bing 壁纸 https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1
+$.ajax(
+    {
+        type: 'get',
+        url: 'https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1',
+        dataType: 'json',
+        success: data => {
+            setMemoBg(data);
+        }
+    }
+);

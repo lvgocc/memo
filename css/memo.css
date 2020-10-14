@@ -20,6 +20,7 @@
     border-radius: 3px;
     color: white;
     font-size: 12px !important;
+    z-index: 99999999;
 }
 
 
