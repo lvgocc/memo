@@ -109,7 +109,9 @@ chrome.browserAction.onClicked.addListener(function (tab) {
     );
 });
 
-
+/**
+ * 长连接
+ */
 chrome.extension.onConnect.addListener(function (port) {
     // console.log('port.name = ' + port.name);
     port.onMessage.addListener(function (msg) {

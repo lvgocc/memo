@@ -40,3 +40,18 @@
     transition: left .5s;
     z-index: 99999999;
 }
+
+
+.lvgo-memo-highlight {
+    background: yellow;
+    color: red;
+}
+
+.lvgo-by-memo-highlight {
+    font-size: 12px;
+    background: #3d8aff;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 2px;
+    padding: 2px;
+}

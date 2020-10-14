@@ -7,6 +7,36 @@
 
 console.log('this info show of chrome-extension-memo content-script.js , follow me https://github.com/lvgocc');
 
+
+function loadScript(scriptUrl, callback) {
+    let script = chrome.runtime.getURL(scriptUrl);
+    fetch(script).then(function (response) {
+        return response.text();
+    }).then(function (responseText) {
+        // Optional: Set sourceURL so that the debugger can correctly
+        // map the source code back to the original script URL.
+        responseText += '\n//# sourceURL=' + scriptUrl;
+        // eval is normally frowned upon, but we are executing static
+        // extension scripts, so that is safe.
+        window.eval(responseText);
+        callback();
+    });
+}
+
+
+function highlightByMemo(e) {
+    // Usage:
+    loadScript('js/highlight.js', function () {
+        console.log(e.memo)
+        var patterns = hanldeKeyword(e.memo);
+        // 针对body内容进行高亮
+        var bodyChildren = window.document.body.childNodes;
+        for (var i = 0; i < bodyChildren.length; i++) {
+            highlightKeyword(bodyChildren[i], patterns[0]);
+        }
+    });
+}
+
 /**
  * dom 加载完成事件监听
  */
@@ -19,10 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         console.log('google aHrefs is processed by lvgo memo , follow me https://github.com/lvgocc');
     }
-    // 注入 memo
-    injectMemoJs('js/memo.js');
     // 插入 memo 块
     injectMemoBlock();
+
+    // 通过备忘录点击之后，跳转到备忘位置
+    jumpTargetPosition();
 });
 
 // memo js
@@ -30,7 +61,10 @@ function injectMemoJs(jsPath) {
     var memoJs = document.createElement('script');
     memoJs.setAttribute('type', 'text/javascript');
     memoJs.src = chrome.extension.getURL(jsPath);
-    document.body.appendChild(memoJs);
+    memoJs.onload = function () {
+        this.parentNode.removeChild(this);
+    };
+    (document.head || document.documentElement).appendChild(memoJs);
 }
 
 // memo block
@@ -91,18 +125,23 @@ chrome.extension.onRequest.addListener(
 /**
  * 通过备忘录点击之后，跳转到备忘位置
  */
-setTimeout(() => {
+function jumpTargetPosition() {
     chrome.storage.sync.get('memo', (result) => {
         if (!result.memo) return;
         result.memo.forEach((e) => {
             if (location.href === e.url) {
                 window.scrollTo(0, e.scrollTop);
+                // 高亮处理
+                highlightByMemo(e);
             }
         })
     });
-}, 1000);
+}
 
 
+/**
+ * 长连接
+ */
 var port = chrome.extension.connect({name: "knockknock"});
 port.postMessage('connection to background');
 port.onMessage.addListener(function (msg) {

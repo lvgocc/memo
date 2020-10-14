@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>highlight</title>
+    <script src="js/highlight.js" type="text/javascript"></script>
+    <style>
+        .highlight {
+            background: yellow;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<body>
+<a name="top"></a>
+<div class="navbar" id="top_nav">
+    <nav class="navbar-main" id="nav_main">
+        <ul class="navbar-list navbar-left" id="nav_left">
+            <li class="navbar-branding">
+                <a href="https://www.cnblogs.com/" title="开发者的网上家园"><img alt="博客园Logo"
+                                                                         src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM"></a>
+            </li>
+            <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+            <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a>
+            </li>
+            <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a>
+            </li>
+            <li><a href="https://brands.cnblogs.com/" id="nav_brandzone"
+                   onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+            <li><a href="https://ing.cnblogs.com/"
+                   onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+            <li><a href="https://edu.cnblogs.com/"
+                   onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+        </ul>
+        <ul class="navbar-list navbar-right" id="nav_right">
+            <li>
+                <form action="https://zzk.cnblogs.com/s" class="navbar-search" id="zzk_search" method="get">
+                    <input id="zzk_search_input" name="w" placeholder="代码改变世界" tabindex="3" type="text">
+                    <button id="zzk_search_button" type="submit">
+                        <img alt="搜索" src="/images/aggsite/search.svg">
+                    </button>
+                </form>
+            </li>
+            <li class="navbar-list" id="navbar_login_status">
+                <a alt="我的博客" class="navbar-user-info navbar-blog"
+                   href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" id="navblog-myblog-icon"
+                   style="display: none;" title="我的博客">
+                    <img alt="我的博客" class="navbar-icon" id="myblog_icon" src="/images/aggsite/myblog.svg">
+                </a>
+                <a alt="短消息" class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/"
+                   style="display: none;" title="短消息">
+                    <img alt="短消息" class="navbar-icon" id="msg_icon"
+                         src="/images/aggsite/message.svg?v=oS4PkibyMjZ9rGD5XAcLt99uW_s76Javy2up4dbnZNY">
+                    <span id="msg_count" style="display: none"></span>
+                </a>
+                <div class="navbar-user-info dropdown" id="user_info" style="display: none;">
+                    <a class="dropdown-button" href="https://home.cnblogs.com/">
+                        <img alt="用户头像" class="navbar-avatar" id="user_icon" src="/images/aggsite/avatar-default.svg">
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" id="navblog-myblog-text">我的博客</a>
+                        <a href="https://home.cnblogs.com/">我的园子</a>
+                        <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                        <a href="javascript:void(0)" onclick="logout();">退出登录</a>
+                    </div>
+                </div>
+                <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/" style="display: inline;">注册</a>
+                <a class="navbar-anonymous"
+                   href="https://account.cnblogs.com/signin/?returnUrl=https://www.cnblogs.com/"
+                   style="display: inline;">登录</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+<!--done-->
+<div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            <a href="https://www.cnblogs.com/ligerleng/" id="lnkBlogLogo"><img alt="返回主页" id="blogLogo"
+                                                                               src="/skins/custom/images/logo.gif"></a>
+
+            <!--done-->
+            <h1><a class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/ligerleng/"
+                   id="Header1_HeaderTitle">冰糖雪梨不加水</a>
+            </h1>
+            <h2>
+
+            </h2>
+
+
+        </div><!--end: blogTitle 博客的标题和副标题 -->
+        <div id="navigator">
+
+            <ul id="navList">
+                <li><a class="menu" href="https://www.cnblogs.com/" id="blog_nav_sitehome">
+                    博客园</a>
+                </li>
+                <li>
+                    <a class="menu" href="https://www.cnblogs.com/ligerleng/" id="blog_nav_myhome">
+                        首页</a>
+                </li>
+                <li>
+
+                    <a class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" id="blog_nav_newpost">
+                        新随笔</a>
+                </li>
+                <li>
+                    <a class="menu"
+                       href="https://msg.cnblogs.com/send/%E5%86%B0%E7%B3%96%E9%9B%AA%E6%A2%A8%E4%B8%8D%E5%8A%A0%E6%B0%B4"
+                       id="blog_nav_contact">
+                        联系</a></li>
+                <li>
+                    <a class="menu" data-rss="https://www.cnblogs.com/ligerleng/rss/" href="javascript:void(0)"
+                       id="blog_nav_rss">
+                        订阅</a>
+                    <!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+                <li>
+                    <a class="menu" href="https://i.cnblogs.com/" id="blog_nav_admin">
+                        管理</a>
+                </li>
+            </ul>
+
+
+            <div class="blogStats">
+
+			<span id="stats_post_count">随笔 -
+7&nbsp; </span>
+                <span id="stats_article_count">文章 -
+0&nbsp; </span>
+                <span id="stats-comment_count">评论 -
+13</span>
+
+
+            </div><!--end: blogStats -->
+        </div><!--end: navigator 博客导航栏 -->
+    </div><!--end: header 头部 -->
+
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+                    <!--done-->
+                    <div id="topics">
+                        <div class="post">
+                            <h1 class="postTitle">
+
+                                <a class="postTitle2 vertical-middle"
+                                   href="https://www.cnblogs.com/ligerleng/p/gmail_assist_2.html"
+                                   id="cb_post_title_url">
+                                    <span>Chrome扩展开发之二——Chrome扩展中脚本的运行机制和通信方式</span>
+
+
+                                </a>
+
+                            </h1>
+                            <div class="clear"></div>
+                            <div class="postBody">
+
+                                <div id="cnblogs_post_description" style="display: none">
+                                    归类并介绍了chrome扩展程序中涉及到的几种javascript脚本，并介绍了他们之间互相通信以及和外部服务器通信的方式。
+                                </div>
+                                <div class="blogpost-body" id="cnblogs_post_body">
+                                    <h5>目录：</h5>
+                                    <h5>&nbsp;</h5>
+                                    <ul>
+                                        <li>
+                                            <p><span style="font-family: 微软雅黑">0.</span><a
+                                                    href="http://www.cnblogs.com/ligerleng/p/gmail_assist_0.html"><span
+                                                    style="font-family: 微软雅黑">Chrome扩展开发（Gmail附件管理助手）系列之〇——概述</span></a>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p><span style="font-family: 微软雅黑">1.</span><a
+                                                    href="http://www.cnblogs.com/ligerleng/p/gmail_assist_1.html"><span
+                                                    style="font-family: 微软雅黑">Chrome扩展开发之一——Chrome扩展的文件结构</span></a></p>
+                                        </li>
+                                        <li>
+                                            <p><span style="font-family: 微软雅黑">2.</span><a
+                                                    href="http://www.cnblogs.com/ligerleng/p/gmail_assist_2.html"><span
+                                                    style="font-family: 微软雅黑">Chrome扩展开发之二——Chrome扩展中脚本的运行机制和通信方式</span></a>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p><span style="font-family: 微软雅黑">3.</span><a
+                                                    href="http://www.cnblogs.com/ligerleng/p/gmail_assist_3.html"><span
+                                                    style="font-family: 微软雅黑">Chrome扩展开发之三——Chrome扩展中的数据本地存储和下载</span></a>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p><span style="font-family: 微软雅黑">4.</span><a
+                                                    href="http://www.cnblogs.com/ligerleng/p/gmail_assist_4.html"><span
+                                                    style="font-family: 微软雅黑">Chrome扩展开发之四——核心功能的实现思路</span></a></p>
+                                        </li>
+                                        <li>
+                                            <p><span style="font-family: 微软雅黑">5.<a
+                                                    href="http://www.cnblogs.com/ligerleng/p/gmail_assist_5.html">Chrome扩展开发之五——采用指数退避算法实现ajax请求的重发，全部完成时触发回调函数</a></span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <p>&nbsp;</p>
+                                    <p><span style="font-family: &quot;Microsoft YaHei&quot;">如果你对GmailAssist感兴趣，可以在chrome商店中搜索“Gmail助手”，或点击<a
+                                            href="https://chrome.google.com/webstore/detail/gmail-attachment-manager/lchiijlphndndjfgecehgmkjbdohndjd"
+                                            target="_blank">这里</a>直接访问商店来安装试用；</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">如果你对GmailAssist的源码感兴趣，可以在我的<a
+                                            href="https://github.com/IceSuger/Gmail_Plugin" target="_blank">GitHub</a>上查看它的源码。</span>
+                                    </p>
+                                    <hr>
+                                    <p>&nbsp;</p>
+                                    <h2><span style="font-family: &quot;Microsoft YaHei&quot;">零、首先来一波注意事项：</span></h2>
+                                    <p><span style="font-family: &quot;Microsoft YaHei&quot;">chrome不允许扩展中的HTML页面内直接内嵌js脚本，像这样：</span>
+                                    </p>
+                                    <div class="cnblogs_code">
+                                        <pre><span style="font-family: &quot;Microsoft YaHei&quot;"><span
+                                                style="color: rgba(0, 0, 255, 1)">&lt;</span><span
+                                                style="color: rgba(128, 0, 0, 1)">script </span><span
+                                                style="color: rgba(255, 0, 0, 1)">type</span><span
+                                                style="color: rgba(0, 0, 255, 1)">="text/javascript"</span><span
+                                                style="color: rgba(0, 0, 255, 1)">&gt;</span><span
+                                                style="background-color: rgba(245, 245, 245, 1); color: rgba(0, 0, 0, 1)"> document.write(</span><span
+                                                style="background-color: rgba(245, 245, 245, 1); color: rgba(0, 0, 0, 1)">"</span><span
+                                                style="background-color: rgba(245, 245, 245, 1); color: rgba(0, 0, 0, 1)">Hello World!</span><span
+                                                style="background-color: rgba(245, 245, 245, 1); color: rgba(0, 0, 0, 1)">"</span><span
+                                                style="background-color: rgba(245, 245, 245, 1); color: rgba(0, 0, 0, 1)">); </span><span
+                                                style="color: rgba(0, 0, 255, 1)">&lt;/</span><span
+                                                style="color: rgba(128, 0, 0, 1)">script</span><span
+                                                style="color: rgba(0, 0, 255, 1)">&gt;</span></span></pre>
+                                    </div>
+                                    <p><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">而要求所有的脚本都作为外部src来引入，像这样：</span>
+                                    </p>
+                                    <div class="cnblogs_code">
+                                        <pre><span style="font-family: &quot;Microsoft YaHei&quot;"><span
+                                                style="color: rgba(0, 0, 255, 1)">&lt;</span><span
+                                                style="color: rgba(128, 0, 0, 1)">script </span><span
+                                                style="color: rgba(255, 0, 0, 1)">src</span><span
+                                                style="color: rgba(0, 0, 255, 1)">="hello.js"</span><span
+                                                style="color: rgba(255, 0, 0, 1)"> charset</span><span
+                                                style="color: rgba(0, 0, 255, 1)">="utf-8"</span><span
+                                                style="color: rgba(0, 0, 255, 1)">&gt;&lt;/</span><span
+                                                style="color: rgba(128, 0, 0, 1)">script</span><span
+                                                style="color: rgba(0, 0, 255, 1)">&gt;</span></span></pre>
+                                    </div>
+                                    <p><span style="font-family: &quot;Microsoft YaHei&quot;">再提一点：chrome扩展中涉及的js脚本一定是要运行在网页上下文中的，也就是说任何一个脚本要跑起来，它必须是属于某一个网页的。</span>
+                                    </p>
+                                    <p><span style="font-family: &quot;Microsoft YaHei&quot;">进入正题。有了基础的网页编程知识后，我们知道我们要做的扩展中，全指着javascript（也就是js）来实现各种程序功能，而HTML和CSS主要是负责显示。那么在Chrome扩展中运行的脚本有哪些呢？我的理解是大致有这么四类：background、popup页面内的js、content script、injected js。下面先分别介绍一下这四类脚本，从几个角度对比一下它们，然后再谈谈它们之间的联系和通信。这里的介绍更多地是侧重理解，而不是具体的书写格式，至于后者，最好的参考就是<a
+                                            href="https://developer.chrome.com/extensions"
+                                            target="_blank">google官方的文档</a>。</span></p>
+                                    <h2><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">一.Chrome扩展中有哪些类型的脚本</span>
+                                    </h2>
+                                    <h3><span style="font-family: &quot;Microsoft YaHei&quot;">1.injected</span></h3>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;"> 生存周期</span></li>
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;"> 　　这种脚本，和原网页自带的脚本，就完全是一路货了。有多种方式来在扩展程序中向正在浏览的页面注入这样的脚本，我只说一种最常用也是最被推荐的：先把脚本保存在js文件里（比如GmailAssist中的tableInited.js），然后在匹配当前页面的content script中（如GmailAssist中的content.js）用类似下面这样的代码来把tableInited.js注入浏览中的页面：</span>
+                                    </p>
+                                    <div class="cnblogs_code">
+                                        <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a
+                                                href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img
+                                                alt="复制代码" src="//common.cnblogs.com/images/copycode.gif"></a></span>
+                                        </div>
+                                        <pre><span style="font-family: &quot;Microsoft YaHei&quot;"><span
+                                                style="color: rgba(0, 0, 255, 1)">var</span> s = document.createElement('script'<span
+                                                style="color: rgba(0, 0, 0, 1)">);
+s.src </span>= chrome.extension.getURL('tableInited.js'<span style="color: rgba(0, 0, 0, 1)">);
+s.onload </span>= <span style="color: rgba(0, 0, 255, 1)">function</span><span style="color: rgba(0, 0, 0, 1)">() {
+    </span><span style="color: rgba(0, 0, 255, 1)">this</span>.parentNode.removeChild(<span
+                                                style="color: rgba(0, 0, 255, 1)">this</span><span
+                                                style="color: rgba(0, 0, 0, 1)">);
+};
+(document.head </span>|| document.documentElement).appendChild(s);</span></pre>
+                                        <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a
+                                                href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img
+                                                alt="复制代码" src="//common.cnblogs.com/images/copycode.gif"></a></span>
+                                        </div>
+                                    </div>
+                                    <p style="margin-left: 30px"><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">		这里要注意一点：你要注入的inject.js需要在manifest中的<span
+                                            style="color: rgba(255, 102, 0, 1)">web_accessible_resources</span>字段里进行声明。否则，扩展程序在加载到浏览器中时，将会报错，如图（图中是某个.css文件没有在manifest中声明导致的报错，和这里说的错误原因是类似的）：</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;"><img alt=""
+                                                                                                  src="https://images2015.cnblogs.com/blog/688641/201601/688641-20160114174329928-33123683.png"></span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			那么<span
+                                            style="color: rgba(255, 102, 0, 1)">web_accessible_resources</span>字段是啥呢？说白了就是你的扩展中的文件，有哪些是要允许从网页可访问的，就需要挨个在这里面声明。像这样：</span>
+                                    </p>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">&nbsp;</span>
+                                    </p>
+                                    <div class="cnblogs_code">
+                                        <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a
+                                                href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img
+                                                alt="复制代码" src="//common.cnblogs.com/images/copycode.gif"></a></span>
+                                        </div>
+                                        <pre><span style="font-family: &quot;Microsoft YaHei&quot;">"web_accessible_resources"<span
+                                                style="color: rgba(0, 0, 0, 1)"> : [
+        </span>"oauth2/oauth2.html"<span style="color: rgba(0, 0, 0, 1)">,
+        </span>"js/tableInited.js"<span style="color: rgba(0, 0, 0, 1)">,
+        </span>"css/style.css"<span style="color: rgba(0, 0, 0, 1)">,
+        </span>"js/table_sort_script.js"<span style="color: rgba(0, 0, 0, 1)">,
+        </span>"images/sort.gif"<span style="color: rgba(0, 0, 0, 1)">,
+  ]</span></span></pre>
+                                        <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a
+                                                href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img
+                                                alt="复制代码" src="//common.cnblogs.com/images/copycode.gif"></a></span>
+                                        </div>
+                                    </div>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">&nbsp;</span>
+                                    </p>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">否则会报上面的错。</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">		显然，这类脚本在每次页面刷新时是会被重新载入的。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">	可用API范围</span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">		只有网页通用的API是可用的，而chrome为扩展提供的API（chrome.*），这种完全注入到用户浏览的页面中的脚本都不能访问。</span><br><br>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">	作用范围/运行环境</span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">		完全和网页原有的脚本文件一样，我称它为<span
+                                            style="color: rgba(51, 153, 102, 1)">“不属于扩展程序的脚本”</span>。</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">		可以访问网页原有js的变量空间。</span><br><br>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">	何时使用</span></li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">		　　我的建议是，仅当你需要获取被浏览页面中原有js中的变量时，才把你的脚本inject到用户浏览的页面中，然后通过接下来例子里这种方式，把它传到content script中。当然了，有一些单纯地操纵DOM元素而不需要它们再返回什么数据的脚本，也可以直接inject到页面里。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">	例子</span></li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">获取ik的值。我在GmailAssist构建初期，尝试过一个gmail的非官方的库，当时为了获取邮箱用户的唯一标识（即ik，它是在gmail原有js的变量空间中的全局变量即GLOBALS中的），就不得不通过向页面中注入injected script来获取到GLOBALS。获取到之后要传给扩展程序的其他部分，则要通过event listener来完成。部分代码如下：</span>
+                                    </p>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;"><em> injected script中：<br></em></span>
+                                    </p>
+                                    <div class="cnblogs_code">
+<pre><span style="font-family: &quot;Microsoft YaHei&quot;"><span style="color: rgba(0, 0, 255, 1)">if</span><span
+        style="color: rgba(0, 0, 0, 1)">(email_data) {
+　　window.postMessage({</span>"usrik": JSON.stringify(userik) }, '*');<span
+        style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">userik就从GLOBALS中取得</span>
+}</span></pre>
+                                    </div>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;"><em> content script中：<br></em></span>
+                                    </p>
+                                    <div class="cnblogs_code">
+                                        <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a
+                                                href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img
+                                                alt="复制代码" src="//common.cnblogs.com/images/copycode.gif"></a></span>
+                                        </div>
+                                        <pre><span style="font-family: &quot;Microsoft YaHei&quot;">window.addEventListener("message", <span
+                                                style="color: rgba(0, 0, 255, 1)">function</span><span
+                                                style="color: rgba(0, 0, 0, 1)">(event) {
+</span><span style="color: rgba(0, 0, 255, 1)">if</span><span style="color: rgba(0, 0, 0, 1)">(event.data.usrik) {
+　　　　usrik </span>=<span style="color: rgba(0, 0, 0, 1)"> event.data.usrik
+　　　　console.log(usrik);
+　　}
+}, </span><span style="color: rgba(0, 0, 255, 1)">false</span>);</span></pre>
+                                        <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a
+                                                href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img
+                                                alt="复制代码" src="//common.cnblogs.com/images/copycode.gif"></a></span>
+                                        </div>
+                                    </div>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">&nbsp;</span>
+                                    </p>
+                                    <h3><span style="font-family: &quot;Microsoft YaHei&quot;"> 2.content script</span>
+                                    </h3>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;"> 生存周期</span></li>
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;"> 　　和injected script相似，它也是被注入到用户当前浏览的页面中的。但区别在于，它不是真正完全融入网页上下文的，而是运行在一个单独的<span
+                                            style="color: rgba(255, 0, 0, 1)">被隔离的环境</span>中。它的生存周期也就是跟浏览的网页一样，最迟到网页加载完全完成时，content script就开始跑了，直到用户当前浏览的网页被关闭。每次刷新时将重新载入。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;"> 可用API范围</span></li>
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;"> 网页通用的API，跨域xhr请求，以及chrome为扩展程序提供的API中的一部分，具体有：（开头都是<span
+                                            style="color: rgba(0, 0, 255, 1)">chrome.</span>）</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			　　<span
+                                            style="color: rgba(0, 0, 255, 1)">extension（getURL、inIncognitoContext、lastError、onRequest、sendRequest）</span></span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;; color: rgba(0, 0, 255, 1)">			　　i18n</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;; color: rgba(0, 0, 255, 1)">			　　runtime（connect、getManifest、getURL、id、onConnect、onMessage、sendMessage）</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;; color: rgba(0, 0, 255, 1)">			　　storage</span>
+                                    </p>
+                                    <ul>
+                                        <li><span
+                                                style="font-family: &quot;Microsoft YaHei&quot;">		作用范围/运行环境</span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">			它是注入用户浏览的网页中的，但又不像injected script那样彻底，而是单独运行在一个隔离环境里。</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			它可以访问一部分chrome给扩展程序提供的API，但也只有一部分。</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			它不运行在网页的真正上下文中，因而只能访问和操纵页面DOM，但访问不到页面里js的变量空间（当然也访问不到页面里js定义的函数们）。</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			它不可以访问background和popup页面中的脚本（我称后面这两类为<span
+                                            style="color: rgba(51, 153, 102, 1)">“完全属于扩展程序的脚本”</span>，接下来介绍）的变量和函数，但可以通过和background的通信来和扩展程序的其他部分实现数据交流。（这句和上句，这两种不可以，都是好理解的，只要你记住content script是运行在专门为它们准备的隔离环境里的即可。）因此我称content script为<span
+                                            style="color: rgba(51, 153, 102, 1)">“半属于扩展程序的脚本”</span>。</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			需要注意到，manifest中声明的形式，content_scripts字段的值是一个数组。也就是说一个扩展程序可以向一个页面中插入多个content script，而每个content script可以有多个 JavaScript 和 CSS 文件。那么有个问题，同一个页面内注入的多个content script可能来自同一个扩展程序，也可能来自不同的扩展程序，那么这些content script可以互相访问对方的变量空间吗？都不可以。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">		何时使用</span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">			需要操纵页面DOM时，需要与具体页面匹配时，需要接受injected js传出来的数据时，以及每次刷新网页都需要重新载入的脚本，就可以作为content script来写。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">		例子</span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">向gmail服务器发xhr请求数据、操纵gmail页面的DOM，把返回的数据显示出来。</span>
+                                    </p>
+                                    <h3><br><span style="font-family: &quot;Microsoft YaHei&quot;">	3.popup</span>
+                                    </h3>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">		生存周期</span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">			在用户点击扩展程序图标时（无论是page action还是browser action），都可以设置弹出一个popup页面。而这个页面中自然是可以有运行的脚本的（比如就叫popup.js）。它会在每次popup页面弹出时重新载入。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span
+                                                style="font-family: &quot;Microsoft YaHei&quot;">		可用API范围</span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">			这类脚本和下一类（background），我都称为<span
+                                            style="color: rgba(51, 153, 102, 1)">“完全属于扩展程序的脚本”</span>。它们不仅可以访问普通网页API、可以发起跨域xhr请求，而且可以访问chrome为扩展程序专门提供的API（即chrome.*）中的全部。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span
+                                                style="font-family: &quot;Microsoft YaHei&quot;">		作用范围/运行环境</span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;"><span
+                                            style="color: rgba(51, 153, 102, 1)">			“完全属于扩展程序的脚本”</span>之间是可以互相访问的，但popup页面中的脚本，会在每次用户呼出popup页面时重新载入。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">		何时使用</span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">			仅针对popup页面内起作用的、比较小的（这样每次重新载入不会太久）脚本，用这一类来实现，比较合适。当然，这种脚本可以向外部请求数据，也可以访问本地存储API（<span
+                                            style="color: rgba(0, 0, 255, 1)">chrome.storage</span>），那么是可以通过这类脚本来写的。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">		例子</span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">授权按钮（加载很快，而且只在每次用户点击图标时加载即可，获取的token通过localStorage保存在本地，功能完成后即可把该脚本占据的资源腾出来）。</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;"><strong>		来个反例</strong>：</span>
+                                    </p>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">最初我因为对这几类脚本的认识还比较模糊，所以图方便把获取附件列表的功能写在了popup页面中，并且没有调用本地存储来在本地cache一份。这就导致每次用户想操作附件时，都得点图标然后等一会才能继续，这样的体验是很差劲的，所以我就把获取附件列表的逻辑挪到了content script中。当然，现在在了解了本地存储API后，我依然认为<strong>不应该</strong>在popup页面中完成诸如获取附件列表这样的功能，原因有二：1.popup页面每次重新加载，即使数据从本地加载比较快，页面元素的加载时间总是不可避免的；2.popup页面的位置和大小限制，从用户角度来看，用它来实现和用户交互的界面，比较不舒服。</span>
+                                    </p>
+                                    <h3><br><span style="font-family: &quot;Microsoft YaHei&quot;">4.跑在后台（background）页面中的脚本</span>
+                                    </h3>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">	生存周期</span></li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;"> 　　这类脚本是运行在浏览器后台的，注意它是与当前浏览页面无关的。</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">		　　所谓的后台脚本，在chrome扩展中又分为两类，分别运行于<span
+                                            style="color: rgba(255, 153, 0, 1)">后台页面（background page）</span>和<span
+                                            style="color: rgba(255, 153, 0, 1)">事件页面（event page）</span>中。两者区别在于，前者（后台页面）持续运行，生存周期和浏览器相同，即从打开浏览器到关闭浏览器期间，后台脚本一直在运行，一直占据着内存等系统资源；而后者（事件页面）只在需要活动时活动，在完全不活动的状态持续几秒后，chrome将会终止其运行，从而释放其占据的系统资源，而在再次有事件需要后台脚本来处理时，<strong><span
+                                            style="color: rgba(255, 0, 0, 1)">重新载入</span></strong>它。这两类咋区分呢？通过你在manifest中的声明：</span>
+                                    </p>
+                                    <div class="cnblogs_code">
+<pre><span style="font-family: &quot;Microsoft YaHei&quot;">"background"<span style="color: rgba(0, 0, 0, 1)">: {
+    </span>"scripts": ["background.js"<span style="color: rgba(0, 0, 0, 1)">],
+    </span>"persistent": <span style="color: rgba(0, 0, 255, 1)">false</span><span style="color: rgba(0, 0, 0, 1)">
+},</span></span></pre>
+                                    </div>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;"> 　　正如上一节说过的，这里persistent的值默认是true，此时这个js就是运行在后台页面的（持续的）；若这个值为false，那就是事件页面（非持续的）了。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;"> 可用API范围</span></li>
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;"> 和popup那种一样。</span><br><br>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">	作用范围/运行环境</span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p><span style="font-family: &quot;Microsoft YaHei&quot;">		　　作为<span
+                                            style="color: rgba(51, 153, 102, 1)">“完全属于扩展程序的脚本”</span>，它可以和其他的<span
+                                            style="color: rgba(51, 153, 102, 1)">“完全属于扩展程序的脚本”</span>之间通信；也是运行在浏览器的环境内的，而与当前浏览的页面无关。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">	何时使用</span></li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">		　　需要持续运行在后台的，肯定就选这种了，而且要把persistent置为true。需要在后台处理些事件啊之类的，包括要用到content script无法访问的扩展程序专用API们时，也应该用这种，不过只要你不是需要它必须持续运行的，就把它设置成事件页面，从而提高性能。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;">	例子</span></li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">　　下载（因为1.能调用chrome给扩展程序提供的下载API的，只有“完全属于扩展程序的脚本”。2.“完全属于扩展程序的脚本”中，只有background这种可以持续运行在后台，或者被别的事件从后台激活，而另一类——popup页面中的脚本则是每次弹出popup页面时都被重新加载一次的，也只有用户点了扩展图标时才会弹出popup页面，若用popup无疑是增加了用户的操作复杂度）。</span>
+                                    </p>
+                                    <h2><span style="font-family: &quot;Microsoft YaHei&quot;">二、这几类脚本之间的通信</span></h2>
+                                    <p><br><span style="font-family: &quot;Microsoft YaHei&quot;">	　　我们现在知道，chrome扩展中的通信可以有这么几类：content script和“完全属于扩展程序的脚本”之间的通信、injected script和content script之间的通信、“完全属于扩展程序的脚本”们互相之间的通信、扩展程序的脚本和外部服务器之间的通信。</span>
+                                    </p>
+                                    <p><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">　　先提一个概念，“<strong>异步</strong>”。异步和同步相对，同步就可以理解为“串行”，即完成一件事，才能做下一件；而异步就是，这件事的命令发出去就可以做其他事了，等这件事完成，可以通过“<strong>回调函数（callback）</strong>”来返回执行结果。曾经看到过一个很形象的例子，异步就相当于你去永和豆浆吃早饭，你把点的东西在柜台告诉服务员，然后你领个号就可以去做你自己的事了，等你的饭做好了，服务员会叫你的号（回调函数，callback），然后你去拿饭就可以吃了。类似的情景里，同步是啥呢，就是你点了餐，然后就只能在柜台那等你的餐做好，然后把饭给你你再走（相当于给你一个返回值，return）。</span>
+                                    </p>
+                                    <p><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">　　chrome扩展内部的信息交换都是<strong>异步</strong>的。当然xhr也可以设置成异步的，也可以设置成同步的。</span>
+                                    </p>
+                                    <h3><span style="font-family: &quot;Microsoft YaHei&quot;">1. content script和“完全属于扩展程序的脚本”之间的通信</span>
+                                    </h3>
+                                    <p><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">　　两者可以互相发送消息，<strong>接收端</strong>的处理方式是一样的：（由于content script可以调用chrome.runtime中和信息传递相关的几个API，而“完全属于扩展程序的脚本”可以访问到全部chrome.*的API，自然可以调用chrome.runtime.onMessage通信API）</span>
+                                    </p>
+                                    <div class="cnblogs_code">
+                                        <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a
+                                                href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img
+                                                alt="复制代码" src="//common.cnblogs.com/images/copycode.gif"></a></span>
+                                        </div>
+                                        <pre><span style="font-family: &quot;Microsoft YaHei&quot;"><span
+                                                style="color: rgba(0, 0, 0, 1)">chrome.runtime.onMessage.addListener(
+  </span><span style="color: rgba(0, 0, 255, 1)">function</span><span style="color: rgba(0, 0, 0, 1)">(request, sender, sendResponse) {
+    console.log(sender.tab </span>?
+                "from a content script:" +<span style="color: rgba(0, 0, 0, 1)"> sender.tab.url :
+                </span>"from the extension"<span style="color: rgba(0, 0, 0, 1)">);
+    </span><span style="color: rgba(0, 0, 255, 1)">if</span> (request.greeting == "hello"<span
+                                                    style="color: rgba(0, 0, 0, 1)">)
+      sendResponse({farewell: </span>"goodbye"<span style="color: rgba(0, 0, 0, 1)">});
+  });</span></span></pre>
+                                        <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a
+                                                href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img
+                                                alt="复制代码" src="//common.cnblogs.com/images/copycode.gif"></a></span>
+                                        </div>
+                                    </div>
+                                    <p><span style="font-family: &quot;Microsoft YaHei&quot;">　　<strong>发送端</strong>有所区别。（当然两种方向的发送，都是可以选择有没有回复）</span>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <p><span style="font-family: &quot;Microsoft YaHei&quot;">　　从content script向“完全属于扩展程序的脚本”发消息：</span>
+                                    </p>
+                                    <div class="cnblogs_code">
+<pre>chrome.runtime.sendMessage({greeting: "hello"}, <span style="color: rgba(0, 0, 255, 1)">function</span><span
+        style="color: rgba(0, 0, 0, 1)">(response) {
+  console.log(response.farewell);
+});</span></pre>
+                                    </div>
+                                    <p>　　从“完全属于扩展程序的脚本”向content script发消息：</p>
+                                    <div class="cnblogs_code">
+                                        <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a
+                                                href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img
+                                                alt="复制代码" src="//common.cnblogs.com/images/copycode.gif"></a></span>
+                                        </div>
+                                        <pre>chrome.tabs.query({active: <span
+                                                style="color: rgba(0, 0, 255, 1)">true</span>, currentWindow: <span
+                                                style="color: rgba(0, 0, 255, 1)">true</span>}, <span
+                                                style="color: rgba(0, 0, 255, 1)">function</span><span
+                                                style="color: rgba(0, 0, 0, 1)">(tabs) {
+  chrome.tabs.sendMessage(tabs[</span>0].id, {greeting: "hello"}, <span
+                                                style="color: rgba(0, 0, 255, 1)">function</span><span
+                                                style="color: rgba(0, 0, 0, 1)">(response) {
+    console.log(response.farewell);
+  });
+});//和上面的区别是，这种消息发送的方向，需要你指明你信息要发到哪个页面（用户浏览的页面）中，也就是哪个tab中（chrome中每个页面都在一个tab，即标签中打开嘛）的content script；但显然上面那种就不需要，而且在接收端也不需要。</span></pre>
+                                        <div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a
+                                                href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img
+                                                alt="复制代码" src="//common.cnblogs.com/images/copycode.gif"></a></span>
+                                        </div>
+                                    </div>
+                                    <p><span style="font-family: &quot;Microsoft YaHei&quot;">　　这部分的实例代码，很容易理解，我也都是直接摘抄的chrome的官方文档，更多更具体的关于这些通信API信息，可以访问<a
+                                            href="https://crxdoc-zh.appspot.com/extensions/runtime"
+                                            target="_blank">这里</a>和<a
+                                            href="https://developer.chrome.com/extensions/messaging"
+                                            target="_blank">这里</a>得到。</span></p>
+                                    <h3><span style="font-family: &quot;Microsoft YaHei&quot;"> 2. injected script和content script之间的通信：</span>
+                                    </h3>
+                                    <p><br><span style="font-family: &quot;Microsoft YaHei&quot;">		　　通过window.addEventListener和 window.postMessage来实现，代码可以参考上面获取user_ik的那个。</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">		　　这种通信方式的原理是基于content script和页面内的脚本（injected script自然也属于页面内的脚本）之间<strong><span
+                                            style="color: rgba(255, 0, 0, 1)">唯一共享的东西</span></strong>就是页面的DOM元素，window就是页面元素，因而可以被用来传递消息。</span>
+                                    </p>
+                                    <h3><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">	3.“完全属于扩展程序的脚本”们之间通信</span>
+                                    </h3>
+                                    <p><br><span style="font-family: &quot;Microsoft YaHei&quot;">		　　首先，他们之间函数是可以直接互相访问的；其次，它们可以互相访问对方的DOM元素；因而他们之间事实上不存在什么复杂的通信，大家都是一家人。</span>
+                                    </p>
+                                    <h3><span style="font-family: &quot;Microsoft YaHei&quot;">4. 扩展程序和外部服务器的通信</span>
+                                    </h3>
+                                    <p style="margin-left: 60px"><span style="font-family: &quot;Microsoft YaHei&quot;">		这里要补充几个概念：</span>
+                                    </p>
+                                    <p style="margin-left: 60px"><span style="font-family: &quot;Microsoft YaHei&quot;"><strong>		1)域（domain）</strong></span>
+                                    </p>
+                                    <p style="margin-left: 60px"><span style="font-family: &quot;Microsoft YaHei&quot;"><img
+                                            alt=""
+                                            src="https://images2015.cnblogs.com/blog/688641/201601/688641-20160114175240460-1977840752.png"></span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			这个表格来自我上一节中提到的电子书《<a
+                                            href="http://www.ituring.com.cn/minibook/950"
+                                            target="_blank">Chrome扩展及应用开发</a>》。其中列出了普通的网站在进行XHR时，必须遵守的规则。但在Chrome扩展中，可以通过在manifest的<span
+                                            style="color: rgba(255, 102, 0, 1)">permissions</span>属性中声明需要跨域的权限，来实现跨域xhr。</span>
+                                    </p>
+                                    <p style="margin-left: 60px"><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;"><strong>		2) XHR（XMLHttpRequest）</strong></span>
+                                    </p>
+                                    <p style="margin-left: 60px"><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			　　这里简单理解为页面或站点之间请求资源所要遵循的格式即可。需要知道，请求有两种结果，一种成功，将在返回信息中附带值为200的状态码；而另一种失败，将根据不同的失败原因在返回信息中附上不同的状态码和具体的失败原因描述（比如最常见的404，页面不存在）。</span>
+                                    </p>
+                                    <p style="margin-left: 30px">&nbsp;</p>
+                                    <p style="margin-left: 30px"><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">　　你向外部服务器请求数据就要通过发起xhr（当然这要求你先把你要请求数据的站点声明在manifest的<span
+                                            style="color: rgba(255, 102, 0, 1)">permissions</span>字段里，这样chrome才允许你跨域，否则根据默认不允许跨域的原则，你只能访问你的扩展程序中的资源——html、js、图片之类的都是资源。说到这，也就可以更好理解前面提到过的manifest中的<span
+                                            style="color: rgba(255, 102, 0, 1)">web_accessible_resource</span>字段的含义了吧）。</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">		　　发起xhr的格式比较固定，篇幅原因，具体可以参考GmailAssist的源码。或者直接百度一下都有一大把。</span><br>
+                                    </p>
+                                    <h4 style="margin-left: 30px"><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">最后补充几点，</span></h4>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">	1. 与扩展程序相关的信息的传送形式都是<strong><span
+                                            style="color: rgba(255, 0, 0, 1)">JSON字符串</span></strong>（可以简单理解为就是把JSON对象加上引号变成字符串），但你并<span
+                                            style="color: rgba(255, 0, 0, 1)"><strong>不需要</strong></span>额外弄个JSON的库到你的程序中，chrome自动集成了这些东西；</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">	2. 除了与外部的xhr交流，内部的这些信息传送<strong><span
+                                            style="color: rgba(255, 0, 0, 1)">不需要</span></strong>你手动转成字符串或者手动从字符串转成对象（JSON.stringify或JSON.parse），这两种过程是自动的，你可以直接认为你传送的就是JSON对象，而不是字符串；<strong><span
+                                            style="color: rgba(255, 0, 0, 1)">但</span></strong>在和外部进行XHR交流时，你<strong><span
+                                            style="color: rgba(255, 0, 0, 1)">需要</span></strong>把发出去的信息手动stringify一下，把收到的信息parse一下，才可以正常使用；</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">	3. 从安全性的角度出发，不要让你的程序接收到外来的信息时，用eval等方法来处理它们，这可能导致恶意脚本的执行，而应该使用JSON.parse这种不会引起脚本执行的方法来处理收到的信息（这一点如果不好理解，可以不去深究，只要记住，<strong>用xhr请求来的信息，统统用JSON.parse来解析即可</strong>）；</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">	4. 可以认为还有一种通信方式，在除了injected script外的剩下几种脚本之间，都可以通过本地保存的数据进行通信（即通过localStorage或者chrome.storage，这二者的概念，下一节中我会介绍）。</span><br>
+                                    </p>
+                                    <p style="margin-left: 30px">&nbsp;</p>
+                                    <h2><span style="font-family: &quot;Microsoft YaHei&quot;">三、GmailAssist中安排哪些逻辑写在哪种脚本中</span>
+                                    </h2>
+                                    <p style="margin-left: 30px">&nbsp;</p>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">　　清楚了上面这些基础知识，结合着对Gmail API的认识，我把GmailAssist要实现的每个功能，按照“它应该被写在哪一类脚本中”，细分成几个具体的小部分（并不是原子操作，这些小部分是可以再细分的，但这是后话）：</span>
+                                    </p>
+                                    <p style="margin-left: 30px">&nbsp;</p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;"><strong>		1. 授权（用了一个现成的库）。</strong></span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">			　　1# 用户点击授权或取消授权按钮，发起授权请求或删除本地保存的OAuth token；（popup）</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;"><strong>		2. 获取列表并显示。</strong></span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">			　　1# 向服务器发请求（用message.list）（content script）</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			　　2# 在gmail的页面的DOM中加入一块页面（直接自己布置在一个div中，或者弄个iframe都可以，我这里采用了前者）（content script）</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			　　3# 收到服务器返回的数据并显示在2#中生成的区域内（content script）</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">　　4# 把列表缓存到本地（用chrome.storage，后面的篇章中会介绍）（content script）</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;"><strong>		3. 单独下载列表中的某个附件</strong></span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">			　　1# 向服务器发请求（content script）</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			　　2# 收到服务器返回的附件下载地址后，把它传递给background（content script）</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			　　3# 弹出下载对话框，让用户选择保存位置和设置保存的文件名（background）——由上面介绍的background和content script的特点，就不难理解为什么需要把下载地址传递给background了。</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;"><strong>		4. 向草稿中插入附件（都是get、post方法调用gmail API，都在content script中完成即可）</strong></span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">			　　1# 获取草稿</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			　　2# 获取附件内容</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			　　3# 拼接出新草稿（虽然不是调用gmail API，但显然也应该直接在content script中完成这部分工作）</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">			　　4# 上传新草稿</span>
+                                    </p>
+                                    <ul>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;"><strong>		5. 批量操作、列表过滤等等针对获取到本地的数据的操作，包括操纵页面DOM的操作，也可以一并都放在content script中来实现。</strong></span>
+                                        </li>
+                                        <li><span style="font-family: &quot;Microsoft YaHei&quot;"><strong>		6. i18n（即国际化/多语言）相关的内容，其实已经基本不涉及js脚本了，我会放在i18n那一节里说，具体请看顶端的目录。</strong></span>
+                                        </li>
+
+
+                                    </ul>
+                                    <p style="margin-left: 30px">&nbsp;</p>
+                                    <p style="margin-left: 30px"><span style="font-family: &quot;Microsoft YaHei&quot;">不难发现，GmailAssist的主要功能都是放在content script中实现的。</span><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">	当你在开发你的扩展程序时，如何决定你的逻辑用哪类js来实现，可以参考我上面的分类介绍。</span>
+                                    </p>
+                                    <h2><span style="font-family: &quot;Microsoft YaHei&quot;">四、总结</span></h2>
+                                    <p style="margin-left: 30px"><br><span
+                                            style="font-family: &quot;Microsoft YaHei&quot;">	chrome扩展中的脚本运行机制和通信方式，就基本是这样。上面的介绍中我没有放多少代码，因为实际开发时，最靠谱的参考一定是<a
+                                            href="https://developer.chrome.com/extensions"
+                                            target="_blank"><strong>官方的文档</strong></a>。上面这些只是记录我的理解，也希望帮助新手更好地理解chrome扩展的architecture。下一节将介绍Chrome扩展中的数据存储和下载。</span><br>
+                                    </p>
+                                </div>
+                                <div id="MySignature"></div>
+                                <div class="clear"></div>
+                                <div id="blog_post_info_block">
+                                    <div id="EntryTag">
+                                        标签:
+                                        <a href="https://www.cnblogs.com/ligerleng/tag/Chrome%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91/">Chrome扩展开发</a>
+                                    </div>
+
+                                    <div id="blog_post_info">
+                                        <div id="green_channel">
+                                            <a href="javascript:void(0);" id="green_channel_digg"
+                                               onclick="DiggIt(5130937,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+                                            <a href="javascript:void(0);" id="green_channel_follow"
+                                               onclick="follow('fd07f0a7-4d63-e411-b908-9dcfd8948a71');">关注我</a>
+                                            <a href="javascript:void(0);" id="green_channel_favorite"
+                                               onclick="AddToWz(cb_entryId);return false;">收藏该文</a>
+                                            <a href="javascript:void(0);" id="green_channel_weibo"
+                                               onclick="ShareToTsina()" title="分享至新浪微博"><img alt=""
+                                                                                             src="https://common.cnblogs.com/images/icon_weibo_24.png"></a>
+                                            <a href="javascript:void(0);" id="green_channel_wechat"
+                                               onclick="shareOnWechat()" title="分享至微信"><img alt=""
+                                                                                            src="https://common.cnblogs.com/images/wechat.png"></a>
+                                        </div>
+                                        <div id="author_profile">
+                                            <div class="author_profile_info" id="author_profile_info">
+                                                <a href="https://home.cnblogs.com/u/ligerleng/" target="_blank"><img
+                                                        alt="" class="author_avatar"
+                                                        src="https://pic.cnblogs.com/face/688641/20160112092554.png"></a>
+                                                <div class="author_profile_info" id="author_profile_detail">
+                                                    <a href="https://home.cnblogs.com/u/ligerleng/">冰糖雪梨不加水</a><br>
+                                                    <a href="https://home.cnblogs.com/u/ligerleng/followees/">关注 - 2</a><br>
+                                                    <a href="https://home.cnblogs.com/u/ligerleng/followers/">粉丝 -
+                                                        10</a>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div id="author_profile_honor"></div>
+                                            <div id="author_profile_follow">
+                                                <a href="javascript:void(0);"
+                                                   onclick="follow('fd07f0a7-4d63-e411-b908-9dcfd8948a71');return false;">+加关注</a>
+                                            </div>
+                                        </div>
+                                        <div id="div_digg">
+                                            <div class="diggit" onclick="votePost(5130937,'Digg')">
+                                                <span class="diggnum" id="digg_count">1</span>
+                                            </div>
+                                            <div class="buryit" onclick="votePost(5130937,'Bury')">
+                                                <span class="burynum" id="bury_count">0</span>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div class="diggword" id="digg_tips">
+                                            </div>
+                                        </div>
+
+                                        <script type="text/javascript">
+                                            currentDiggType = 0;
+                                        </script>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div id="post_next_prev">
+
+                                        <a class="p_n_p_prefix"
+                                           href="https://www.cnblogs.com/ligerleng/p/gmail_assist_1.html">« </a> 上一篇： <a
+                                            href="https://www.cnblogs.com/ligerleng/p/gmail_assist_1.html"
+                                            title="发布于 2016-01-11 19:00">Chrome扩展开发之一——Chrome扩展的文件结构</a>
+                                        <br>
+                                        <a class="p_n_p_prefix"
+                                           href="https://www.cnblogs.com/ligerleng/p/gmail_assist_3.html">» </a> 下一篇： <a
+                                            href="https://www.cnblogs.com/ligerleng/p/gmail_assist_3.html"
+                                            title="发布于 2016-01-29 00:14">Chrome扩展开发之三——Chrome扩展中的数据本地存储和下载</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="postDesc">posted @
+                                <span id="post-date">2016-01-15 21:51</span>&nbsp;
+                                <a href="https://www.cnblogs.com/ligerleng/">冰糖雪梨不加水</a>&nbsp;
+                                阅读(<span id="post_view_count">11685</span>)&nbsp;
+                                评论(<span id="post_comment_count">12</span>)&nbsp;
+                                <a href="https://i.cnblogs.com/EditPosts.aspx?postid=5130937" rel="nofollow">编辑</a>&nbsp;
+                                <a href="javascript:void(0)" onclick="AddToWz(5130937);return false;">收藏</a></div>
+                        </div>
+
+
+                    </div><!--end: topics 文章、评论容器-->
+                </div>
+                <script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+                <script>markdown_highlight();</script>
+                <script>
+                    var allowComments = true, cb_blogId = 203711, cb_blogApp = 'ligerleng',
+                        cb_blogUserGuid = 'fd07f0a7-4d63-e411-b908-9dcfd8948a71';
+                    var cb_entryId = 5130937, cb_entryCreatedDate = '2016-01-15 21:51', cb_postType = 1;
+                    loadViewCount(cb_entryId);
+                </script>
+                <a name="!comments"></a>
+                <div id="blog-comments-placeholder">
+
+                    <div id="comment_pager_top">
+
+                    </div>
+
+                    <br>
+                    <div class="feedback_area_title">评论列表</div>
+                    <div class="feedbackNoItems">
+                        <div class="feedbackNoItems"></div>
+                    </div>
+                    <div class="feedbackItem">
+                        <div class="feedbackListSubtitle">
+                            <div class="feedbackManage">
+                                &nbsp;&nbsp;
+
+                                <span class="comment_actions">
+
+
+
+
+</span>
+
+
+                            </div>
+
+                            <a class="layer" href="#3348923">#1楼</a>
+                            <a id="comment_anchor_3348923" name="3348923"></a>
+
+                            <span class="comment_date">2016-01-16 16:27</span>
+
+
+                            <a href="https://www.cnblogs.com/jroger/" id="a_comment_author_3348923" target="_blank">JRoger</a>
+
+                        </div>
+                        <div class="feedbackCon">
+
+                            <div class="blog_comment_body cnblogs-ubb" data-format-type="Ubb" id="comment_body_3348923">
+                                支持!
+                            </div>
+                            <div class="comment_vote">
+                                <span class="comment_error" style="color: red"></span>
+                                <a class="comment_digg" href="javascript:void(0);"
+                                   onclick="return voteComment(3348923, 'Digg', this.parentElement, false);">
+                                    支持(0)
+                                </a>
+                                <a class="comment_burry" href="javascript:void(0);"
+                                   onclick="return voteComment(3348923, 'Bury', this.parentElement, false);">
+                                    反对(0)
+                                </a>
+                            </div>
+                            <span id="comment_3348923_avatar" style="display:none">
+            https://pic.cnblogs.com/face/136080/20200710082905.png
+        </span>
+
+                        </div>
+                    </div>
+                    <div class="feedbackItem">
+                        <div class="feedbackListSubtitle">
+                            <div class="feedbackManage">
+                                &nbsp;&nbsp;
+
+                                <span class="comment_actions">
+
+
+
+
+</span>
+
+
+                            </div>
+
+                            <a class="layer" href="#3349045">#2楼</a>
+                            <a id="comment_anchor_3349045" name="3349045"></a>
+                            [<span class="louzhu">楼主</span>]
+                            <span class="comment_date">2016-01-17 11:14</span>
+
+
+                            <a href="https://www.cnblogs.com/ligerleng/" id="a_comment_author_3349045" target="_blank">冰糖雪梨不加水</a>
+
+                        </div>
+                        <div class="feedbackCon">
+
+                            <div class="blog_comment_body cnblogs-ubb" data-format-type="Ubb" id="comment_body_3349045">
+                                <a href="#3348923" onclick="commentManager.renderComments(0,50,3348923);"
+                                   title="查看所回复的评论">@</a>
+                                JRoger<br>谢谢！
+                            </div>
+                            <div class="comment_vote">
+                                <span class="comment_error" style="color: red"></span>
+                                <a class="comment_digg" href="javascript:void(0);"
+                                   onclick="return voteComment(3349045, 'Digg', this.parentElement, false);">
+                                    支持(0)
+                                </a>
+                                <a class="comment_burry" href="javascript:void(0);"
+                                   onclick="return voteComment(3349045, 'Bury', this.parentElement, false);">
+                                    反对(0)
+                                </a>
+                            </div>
+                            <span id="comment_3349045_avatar" style="display:none">
+            https://pic.cnblogs.com/face/688641/20160112092554.png
+        </span>
+
+                        </div>
+                    </div>
+                    <div class="feedbackItem">
+                        <div class="feedbackListSubtitle">
+                            <div class="feedbackManage">
+                                &nbsp;&nbsp;
+
+                                <span class="comment_actions">
+
+
+
+
+</span>
+
+
+                            </div>
+
+                            <a class="layer" href="#3594894">#3楼</a>
+                            <a id="comment_anchor_3594894" name="3594894"></a>
+
+                            <span class="comment_date">2017-01-03 10:38</span>
+
+
+                            <a href="https://www.cnblogs.com/xumengxuan/" id="a_comment_author_3594894" target="_blank">蚊子博客</a>
+
+                        </div>
+                        <div class="feedbackCon">
+
+                            <div class="blog_comment_body cnblogs-ubb" data-format-type="Ubb" id="comment_body_3594894">
+                                请问，我在popup页面，怎么获取到页面中的数据呢，比如点击按钮弹出popup页面时，显示图片的数量，显示http请求的数量。这个思路是什么呢？谢谢
+                            </div>
+                            <div class="comment_vote">
+                                <span class="comment_error" style="color: red"></span>
+                                <a class="comment_digg" href="javascript:void(0);"
+                                   onclick="return voteComment(3594894, 'Digg', this.parentElement, false);">
+                                    支持(0)
+                                </a>
+                                <a class="comment_burry" href="javascript:void(0);"
+                                   onclick="return voteComment(3594894, 'Bury', this.parentElement, false);">
+                                    反对(0)
+                                </a>
+                            </div>
+                            <span id="comment_3594894_avatar" style="display:none">
+            https://pic.cnblogs.com/face/443443/20191118154218.png
+        </span>
+
+                        </div>
+                    </div>
+                    <div class="feedbackItem">
+                        <div class="feedbackListSubtitle">
+                            <div class="feedbackManage">
+                                &nbsp;&nbsp;
+
+                                <span class="comment_actions">
+
+
+
+
+</span>
+
+
+                            </div>
+
+                            <a class="layer" href="#3595015">#4楼</a>
+                            <a id="comment_anchor_3595015" name="3595015"></a>
+                            [<span class="louzhu">楼主</span>]
+                            <span class="comment_date">2017-01-03 12:03</span>
+
+
+                            <a href="https://www.cnblogs.com/ligerleng/" id="a_comment_author_3595015" target="_blank">冰糖雪梨不加水</a>
+
+                        </div>
+                        <div class="feedbackCon">
+
+                            <div class="blog_comment_body cnblogs-ubb" data-format-type="Ubb" id="comment_body_3595015">
+                                <a href="#3594894" onclick="commentManager.renderComments(0,50,3594894);"
+                                   title="查看所回复的评论">@</a>
+                                wenzi0_0<br>用content script拿到页面上的信息，然后传给popup里的脚本就行。怎么传，可以看看这篇博文里通信那部分的第1类。
+                            </div>
+                            <div class="comment_vote">
+                                <span class="comment_error" style="color: red"></span>
+                                <a class="comment_digg" href="javascript:void(0);"
+                                   onclick="return voteComment(3595015, 'Digg', this.parentElement, false);">
+                                    支持(0)
+                                </a>
+                                <a class="comment_burry" href="javascript:void(0);"
+                                   onclick="return voteComment(3595015, 'Bury', this.parentElement, false);">
+                                    反对(0)
+                                </a>
+                            </div>
+                            <span id="comment_3595015_avatar" style="display:none">
+            https://pic.cnblogs.com/face/688641/20160112092554.png
+        </span>
+
+                        </div>
+                    </div>
+                    <div class="feedbackItem">
+                        <div class="feedbackListSubtitle">
+                            <div class="feedbackManage">
+                                &nbsp;&nbsp;
+
+                                <span class="comment_actions">
+
+
+
+
+</span>
+
+
+                            </div>
+
+                            <a class="layer" href="#3824481">#5楼</a>
+                            <a id="comment_anchor_3824481" name="3824481"></a>
+
+                            <span class="comment_date">2017-10-28 16:27</span>
+
+
+                            <a href="https://www.cnblogs.com/lessfish/" id="a_comment_author_3824481" target="_blank">lessfish</a>
+
+                        </div>
+                        <div class="feedbackCon">
+
+                            <div class="blog_comment_body cnblogs-ubb" data-format-type="Ubb" id="comment_body_3824481">
+                                好文<br><br> “网页通用的API，跨域xhr请求” content_scripts 应该是不能跨域的把？
+                            </div>
+                            <div class="comment_vote">
+                                <span class="comment_error" style="color: red"></span>
+                                <a class="comment_digg" href="javascript:void(0);"
+                                   onclick="return voteComment(3824481, 'Digg', this.parentElement, false);">
+                                    支持(0)
+                                </a>
+                                <a class="comment_burry" href="javascript:void(0);"
+                                   onclick="return voteComment(3824481, 'Bury', this.parentElement, false);">
+                                    反对(0)
+                                </a>
+                            </div>
+                            <span id="comment_3824481_avatar" style="display:none">
+            https://pic.cnblogs.com/face/675542/20190427005154.png
+        </span>
+
+                        </div>
+                    </div>
+                    <div class="feedbackItem">
+                        <div class="feedbackListSubtitle">
+                            <div class="feedbackManage">
+                                &nbsp;&nbsp;
+
+                                <span class="comment_actions">
+
+
+
+
+</span>
+
+
+                            </div>
+
+                            <a class="layer" href="#3896227">#6楼</a>
+                            <a id="comment_anchor_3896227" name="3896227"></a>
+                            [<span class="louzhu">楼主</span>]
+                            <span class="comment_date">2018-01-24 10:59</span>
+
+
+                            <a href="https://www.cnblogs.com/ligerleng/" id="a_comment_author_3896227" target="_blank">冰糖雪梨不加水</a>
+
+                        </div>
+                        <div class="feedbackCon">
+
+                            <div class="blog_comment_body cnblogs-ubb" data-format-type="Ubb" id="comment_body_3896227">
+                                <a href="#3824481" onclick="commentManager.renderComments(0,50,3824481);"
+                                   title="查看所回复的评论">@</a>
+                                韩子迟<br>抱歉回复得这么晚。<br>是可以的。可参考<a
+                                    href="https://developer.chrome.com/extensions/content_scripts" target="_blank">官方文档这一页</a>，其中有提到“Content
+                                scripts can also make cross-site XMLHttpRequests to the same sites as their parent
+                                extensions”。
+                            </div>
+                            <div class="comment_vote">
+                                <span class="comment_error" style="color: red"></span>
+                                <a class="comment_digg" href="javascript:void(0);"
+                                   onclick="return voteComment(3896227, 'Digg', this.parentElement, false);">
+                                    支持(0)
+                                </a>
+                                <a class="comment_burry" href="javascript:void(0);"
+                                   onclick="return voteComment(3896227, 'Bury', this.parentElement, false);">
+                                    反对(0)
+                                </a>
+                            </div>
+                            <span id="comment_3896227_avatar" style="display:none">
+            https://pic.cnblogs.com/face/688641/20160112092554.png
+        </span>
+
+                        </div>
+                    </div>
+                    <div class="feedbackItem">
+                        <div class="feedbackListSubtitle">
+                            <div class="feedbackManage">
+                                &nbsp;&nbsp;
+
+                                <span class="comment_actions">
+
+
+
+
+</span>
+
+
+                            </div>
+
+                            <a class="layer" href="#3902486">#7楼</a>
+                            <a id="comment_anchor_3902486" name="3902486"></a>
+
+                            <span class="comment_date">2018-02-02 11:06</span>
+
+
+                            <a href="https://www.cnblogs.com/lessfish/" id="a_comment_author_3902486" target="_blank">lessfish</a>
+
+                        </div>
+                        <div class="feedbackCon">
+
+                            <div class="blog_comment_body cnblogs-ubb" data-format-type="Ubb" id="comment_body_3902486">
+                                <a href="#3896227" onclick="commentManager.renderComments(0,50,3896227);"
+                                   title="查看所回复的评论">@</a>
+                                冰糖雪梨不加水<br>还真是 ... 只要在 permissions 中声明即可，不过 https 的好像不能跨到 http
+                            </div>
+                            <div class="comment_vote">
+                                <span class="comment_error" style="color: red"></span>
+                                <a class="comment_digg" href="javascript:void(0);"
+                                   onclick="return voteComment(3902486, 'Digg', this.parentElement, false);">
+                                    支持(0)
+                                </a>
+                                <a class="comment_burry" href="javascript:void(0);"
+                                   onclick="return voteComment(3902486, 'Bury', this.parentElement, false);">
+                                    反对(0)
+                                </a>
+                            </div>
+                            <span id="comment_3902486_avatar" style="display:none">
+            https://pic.cnblogs.com/face/675542/20190427005154.png
+        </span>
+
+                        </div>
+                    </div>
+                    <div class="feedbackItem">
+                        <div class="feedbackListSubtitle">
+                            <div class="feedbackManage">
+                                &nbsp;&nbsp;
+
+                                <span class="comment_actions">
+
+
+
+
+</span>
+
+
+                            </div>
+
+                            <a class="layer" href="#3903276">#8楼</a>
+                            <a id="comment_anchor_3903276" name="3903276"></a>
+
+                            <span class="comment_date">2018-02-03 16:35</span>
+
+
+                            <a href="https://www.cnblogs.com/lessfish/" id="a_comment_author_3903276" target="_blank">lessfish</a>
+
+                        </div>
+                        <div class="feedbackCon">
+
+                            <div class="blog_comment_body cnblogs-ubb" data-format-type="Ubb" id="comment_body_3903276">
+                                貌似 post 的不能跨域，get 的可以，在 content.js 中，没有完全验证
+                            </div>
+                            <div class="comment_vote">
+                                <span class="comment_error" style="color: red"></span>
+                                <a class="comment_digg" href="javascript:void(0);"
+                                   onclick="return voteComment(3903276, 'Digg', this.parentElement, false);">
+                                    支持(0)
+                                </a>
+                                <a class="comment_burry" href="javascript:void(0);"
+                                   onclick="return voteComment(3903276, 'Bury', this.parentElement, false);">
+                                    反对(0)
+                                </a>
+                            </div>
+                            <span id="comment_3903276_avatar" style="display:none">
+            https://pic.cnblogs.com/face/675542/20190427005154.png
+        </span>
+
+                        </div>
+                    </div>
+                    <div class="feedbackItem">
+                        <div class="feedbackListSubtitle">
+                            <div class="feedbackManage">
+                                &nbsp;&nbsp;
+
+                                <span class="comment_actions">
+
+
+
+
+</span>
+
+
+                            </div>
+
+                            <a class="layer" href="#3904192">#9楼</a>
+                            <a id="comment_anchor_3904192" name="3904192"></a>
+                            [<span class="louzhu">楼主</span>]
+                            <span class="comment_date">2018-02-05 15:53</span>
+
+
+                            <a href="https://www.cnblogs.com/ligerleng/" id="a_comment_author_3904192" target="_blank">冰糖雪梨不加水</a>
+
+                        </div>
+                        <div class="feedbackCon">
+
+                            <div class="blog_comment_body cnblogs-ubb" data-format-type="Ubb" id="comment_body_3904192">
+                                <a href="#3903276" onclick="commentManager.renderComments(0,50,3903276);"
+                                   title="查看所回复的评论">@</a>
+                                韩子迟<br>我没验证过...但感觉应该不会有这样的限制啊...等有机会我再试试
+                            </div>
+                            <div class="comment_vote">
+                                <span class="comment_error" style="color: red"></span>
+                                <a class="comment_digg" href="javascript:void(0);"
+                                   onclick="return voteComment(3904192, 'Digg', this.parentElement, false);">
+                                    支持(0)
+                                </a>
+                                <a class="comment_burry" href="javascript:void(0);"
+                                   onclick="return voteComment(3904192, 'Bury', this.parentElement, false);">
+                                    反对(0)
+                                </a>
+                            </div>
+                            <span id="comment_3904192_avatar" style="display:none">
+            https://pic.cnblogs.com/face/688641/20160112092554.png
+        </span>
+
+                        </div>
+                    </div>
+                    <div class="feedbackItem">
+                        <div class="feedbackListSubtitle">
+                            <div class="feedbackManage">
+                                &nbsp;&nbsp;
+
+                                <span class="comment_actions">
+
+
+
+
+</span>
+
+
+                            </div>
+
+                            <a class="layer" href="#3904235">#10楼</a>
+                            <a id="comment_anchor_3904235" name="3904235"></a>
+
+                            <span class="comment_date">2018-02-05 16:35</span>
+
+
+                            <a href="https://www.cnblogs.com/lessfish/" id="a_comment_author_3904235" target="_blank">lessfish</a>
+
+                        </div>
+                        <div class="feedbackCon">
+
+                            <div class="blog_comment_body cnblogs-ubb" data-format-type="Ubb" id="comment_body_3904235">
+                                <a href="#3904192" onclick="commentManager.renderComments(0,50,3904192);"
+                                   title="查看所回复的评论">@</a>
+                                冰糖雪梨不加水<br>不不不，我是说我没有完全验证过，哈哈哈
+                            </div>
+                            <div class="comment_vote">
+                                <span class="comment_error" style="color: red"></span>
+                                <a class="comment_digg" href="javascript:void(0);"
+                                   onclick="return voteComment(3904235, 'Digg', this.parentElement, false);">
+                                    支持(0)
+                                </a>
+                                <a class="comment_burry" href="javascript:void(0);"
+                                   onclick="return voteComment(3904235, 'Bury', this.parentElement, false);">
+                                    反对(0)
+                                </a>
+                            </div>
+                            <span id="comment_3904235_avatar" style="display:none">
+            https://pic.cnblogs.com/face/675542/20190427005154.png
+        </span>
+
+                        </div>
+                    </div>
+                    <div class="feedbackItem">
+                        <div class="feedbackListSubtitle">
+                            <div class="feedbackManage">
+                                &nbsp;&nbsp;
+
+                                <span class="comment_actions">
+
+
+
+
+</span>
+
+
+                            </div>
+
+                            <a class="layer" href="#4178876">#11楼</a>
+                            <a id="comment_anchor_4178876" name="4178876"></a>
+
+                            <span class="comment_date">2019-02-13 17:55</span>
+
+
+                            <a href="https://home.cnblogs.com/u/1541657/" id="a_comment_author_4178876" target="_blank">李时珍di皮</a>
+
+                        </div>
+                        <div class="feedbackCon">
+
+                            <div class="blog_comment_body cnblogs-ubb" data-format-type="Ubb" id="comment_body_4178876">
+                                请问大神chrome的扩展和chrome packaged_app之间如何进行通信啊，用runtime.sendMessage都不行,还是根本就不能进行通信.....
+                            </div>
+                            <div class="comment_vote">
+                                <span class="comment_error" style="color: red"></span>
+                                <a class="comment_digg" href="javascript:void(0);"
+                                   onclick="return voteComment(4178876, 'Digg', this.parentElement, false);">
+                                    支持(0)
+                                </a>
+                                <a class="comment_burry" href="javascript:void(0);"
+                                   onclick="return voteComment(4178876, 'Bury', this.parentElement, false);">
+                                    反对(0)
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="feedbackItem">
+                        <div class="feedbackListSubtitle">
+                            <div class="feedbackManage">
+                                &nbsp;&nbsp;
+
+                                <span class="comment_actions">
+
+
+
+
+</span>
+
+
+                            </div>
+
+                            <a class="layer" href="#4319695">#12楼</a>
+                            <a id="comment_anchor_4319695" name="4319695"></a>
+                            <span id="comment-maxId" style="display: none">4319695</span>
+                            <span id="comment-maxDate" style="display: none">2019/8/7 下午7:20:51</span>
+
+                            <span class="comment_date">2019-08-07 19:20</span>
+
+
+                            <a href="https://home.cnblogs.com/u/1080643/" id="a_comment_author_4319695" target="_blank">iceFrooooog</a>
+
+                        </div>
+                        <div class="feedbackCon">
+
+                            <div class="blog_comment_body cnblogs-ubb" data-format-type="Ubb" id="comment_body_4319695">
+                                确实讲得比较清晰，比较强
+                            </div>
+                            <div class="comment_vote">
+                                <span class="comment_error" style="color: red"></span>
+                                <a class="comment_digg" href="javascript:void(0);"
+                                   onclick="return voteComment(4319695, 'Digg', this.parentElement, false);">
+                                    支持(0)
+                                </a>
+                                <a class="comment_burry" href="javascript:void(0);"
+                                   onclick="return voteComment(4319695, 'Bury', this.parentElement, false);">
+                                    反对(0)
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div id="comment_pager_bottom">
+
+                    </div>
+
+
+                </div>
+                <script>
+                    var commentManager = new blogCommentManager();
+                    commentManager.renderComments(0);
+                </script>
+                <div class="commentform" id="comment_form">
+                    <a name="commentform"></a>
+                    <div id="divCommentShow"></div>
+                    <div id="comment_nav"><span id="span_refresh_tips"></span><a clientidmode="Static"
+                                                                                 href="javascript:void(0);"
+                                                                                 id="lnk_RefreshComments"
+                                                                                 onclick="return RefreshCommentList();"
+                                                                                 runat="server">刷新评论</a><a href="#"
+                                                                                                           onclick="return RefreshPage();">刷新页面</a><a
+                            href="#top">返回顶部</a></div>
+                    <div id="comment_form_container" style="visibility: visible;">
+                        <div class="login_tips">
+                            登录后才能发表评论，立即 <a class="underline" href="javascript:void(0);"
+                                            onclick="return login('commentform');" rel="nofollow">登录</a> 或
+                            <a class="underline" href="javascript:void(0);" onclick="return register();" rel="nofollow">注册</a>，
+                            <a href="https://www.cnblogs.com/">访问</a> 网站首页。
+                        </div>
+                        <div class="under-comment-nav">
+                            <ul>
+                                <li><a href="/"
+                                       onclick="ga('send', 'event', 'Link', 'click', 'under-comment-nav-sitehome')">首页</a>
+                                </li>
+                                <li><a href="//news.cnblogs.com/"
+                                       onclick="ga('send', 'event', 'Link', 'click', 'under-comment-nav-news')">新闻</a>
+                                </li>
+                                <li><a href="//q.cnblogs.com/"
+                                       onclick="ga('send', 'event', 'Link', 'click', 'under-comment-nav-q')">博问</a></li>
+                                <li><a href="//brands.cnblogs.com/"
+                                       onclick="ga('send', 'event', 'Link', 'click', 'under-comment-nav-brands')">专区</a>
+                                </li>
+                                <li><a href="//ing.cnblogs.com/"
+                                       onclick="ga('send', 'event', 'Link', 'click', 'under-comment-nav-ing')">闪存</a>
+                                </li>
+                                <li><a href="//edu.cnblogs.com/"
+                                       onclick="ga('send', 'event', 'Link', 'click', 'under-comment-nav-edu')">班级</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+                    <div id="ad_t2"></div>
+                    <div id="opt_under_post"></div>
+                    <div class="c_ad_block" id="cnblogs_c1">
+                        <div id="div-gpt-ad-1592365906576-0" style="width: 300px; height: 250px;"></div>
+                    </div>
+                    <div id="under_post_news">
+                        <div class="recomm-block"><b>相关博文：</b><br>· <a
+                                href="https://www.cnblogs.com/jtzfeng/p/6169330.html" onclick="clickRecomItmem(6169330)"
+                                target="_blank" title="chrome扩展(浏览器插件)开发实用教程">chrome扩展(浏览器插件)开发实用教程</a><br>· <a
+                                href="https://www.cnblogs.com/coco1s/p/8004510.html" onclick="clickRecomItmem(8004510)"
+                                target="_blank" title="【前端工具】Chrome 扩展程序的开发与发布 -- 手把手教你开发扩展程序">【前端工具】Chrome 扩展程序的开发与发布
+                            -- 手把手教你开发扩展程序</a><br>· <a
+                                href="https://www.cnblogs.com/liuxianan/p/chrome-plugin-develop.html"
+                                onclick="clickRecomItmem(7148964)" target="_blank" title="【干货】Chrome插件(扩展)开发全攻略">【干货】Chrome插件(扩展)开发全攻略</a><br>·
+                            <a href="https://www.cnblogs.com/meteoric_cry/p/3574457.html"
+                               onclick="clickRecomItmem(3574457)" target="_blank" title="关于chrome插件编写的小结">关于chrome插件编写的小结</a><br>·
+                            <a href="https://www.cnblogs.com/sinojelly/archive/2011/01/11/1933213.html"
+                               onclick="clickRecomItmem(1933213)" target="_blank" title="Chrome扩展程序开发调试简明教程">Chrome扩展程序开发调试简明教程</a><br>»
+                            <a href="https://recomm.cnblogs.com/blogpost/5130937" target="_blank">更多推荐...</a></div>
+                    </div>
+                    <div class="c_ad_block" id="cnblogs_c2">
+                        <div id="div-gpt-ad-1592366332455-0" style="width: 468px; height: 60px;"></div>
+                    </div>
+                    <div id="under_post_kb">
+                        <div class="itnews c_ad_block">
+                            <b>最新 IT 新闻</b>:
+                            <br>
+                            · <a href="//news.cnblogs.com/n/674931/" target="_blank">摄像头大幅升级！苹果晒iPhone
+                            12系列拍摄样张：这质感如何？</a>
+                            <br>
+                            · <a href="//news.cnblogs.com/n/674930/" target="_blank">神文案来了！天才小熊猫总结苹果iPhone 12发布会</a>
+                            <br>
+                            · <a href="//news.cnblogs.com/n/674929/" target="_blank">iPhone 12系列法国版标配有线耳机！全球独享待遇</a>
+                            <br>
+                            · <a href="//news.cnblogs.com/n/674928/" target="_blank">真的 别再碰瓷iPhone的拍照了</a>
+                            <br>
+                            · <a href="//news.cnblogs.com/n/674927/"
+                                 target="_blank">论文代码Chrome神器：去谷歌学术搜到文章，代码链接就能自动展示</a>
+                            <br>
+                            » <a href="https://news.cnblogs.com/" target="_blank" title="IT 新闻">更多新闻...</a>
+                        </div>
+                    </div>
+                    <div class="c_ad_block" id="HistoryToday"></div>
+                    <script type="text/javascript">
+                        fixPostBody();
+                        deliverBigBanner();
+                        setTimeout(function () {
+                            incrementViewCount(cb_entryId);
+                        }, 50);
+                        deliverT2();
+                        deliverC1C2();
+                        loadNewsAndKb();
+                        loadBlogSignature();
+                        LoadPostCategoriesTags(cb_blogId, cb_entryId);
+                        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+                        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+                        loadOptUnderPost();
+                        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+                    </script>
+                </div>
+            </div><!--end: forFlow -->
+        </div><!--end: mainContent 主体内容容器-->
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+
+                <div class="newsItem" id="sidebar_news"><!--done-->
+                    <h3 class="catListTitle">公告</h3>
+
+                    <div id="blog-news">
+
+                        <div id="profile_block">
+                            昵称：
+                            <a href="https://home.cnblogs.com/u/ligerleng/">
+                                冰糖雪梨不加水
+                            </a>
+                            <br>
+                            园龄：
+                            <a href="https://home.cnblogs.com/u/ligerleng/" title="入园时间：2014-11-03">
+                                5年11个月
+                            </a>
+                            <br>
+                            粉丝：
+                            <a href="https://home.cnblogs.com/u/ligerleng/followers/">
+                                10
+                            </a>
+                            <br>
+                            关注：
+                            <a href="https://home.cnblogs.com/u/ligerleng/followees/">
+                                2
+                            </a>
+                            <div id="p_b_follow">
+                                <a href="javascript:void(0)" onclick="follow('fd07f0a7-4d63-e411-b908-9dcfd8948a71')">+加关注</a>
+                            </div>
+                            <script>getFollowStatus('fd07f0a7-4d63-e411-b908-9dcfd8948a71');</script>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="sidebar_ad"></div>
+                <div id="blog-calendar" style="">
+
+                    <table border="0" cellpadding="0" cellspacing="0" class="Cal" id="blogCalendar" title="Calendar">
+                        <tbody>
+                        <tr>
+                            <td colspan="7">
+                                <table border="0" cellspacing="0" class="CalTitle">
+                                    <tbody>
+                                    <tr>
+                                        <td class="CalNextPrev">
+                                            <a href="javascript:void(0);"
+                                               onclick="loadBlogCalendar('2020/09/14'); return false;">&lt;</a>
+                                        </td>
+                                        <td align="center">2020年10月</td>
+                                        <td align="right" class="CalNextPrev">
+                                            <a href="javascript:void(0);"
+                                               onclick="loadBlogCalendar('2020/11/14'); return false;">&gt;</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th abbr="日" align="center" class="CalDayHeader" scope="col">日</th>
+                            <th abbr="一" align="center" class="CalDayHeader" scope="col">一</th>
+                            <th abbr="二" align="center" class="CalDayHeader" scope="col">二</th>
+                            <th abbr="三" align="center" class="CalDayHeader" scope="col">三</th>
+                            <th abbr="四" align="center" class="CalDayHeader" scope="col">四</th>
+                            <th abbr="五" align="center" class="CalDayHeader" scope="col">五</th>
+                            <th abbr="六" align="center" class="CalDayHeader" scope="col">六</th>
+                        </tr>
+                        <tr>
+                            <td align="center" class="CalOtherMonthDay">27</td>
+                            <td align="center" class="CalOtherMonthDay">28</td>
+                            <td align="center" class="CalOtherMonthDay">29</td>
+                            <td align="center" class="CalOtherMonthDay">30</td>
+                            <td align="center" class="">
+                                1
+                            </td>
+                            <td align="center" class="">
+                                2
+                            </td>
+                            <td align="center" class="CalWeekendDay">
+                                3
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" class="CalWeekendDay">
+                                4
+                            </td>
+                            <td align="center" class="">
+                                5
+                            </td>
+                            <td align="center" class="">
+                                6
+                            </td>
+                            <td align="center" class="">
+                                7
+                            </td>
+                            <td align="center" class="">
+                                8
+                            </td>
+                            <td align="center" class="">
+                                9
+                            </td>
+                            <td align="center" class="CalWeekendDay">
+                                10
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" class="CalWeekendDay">
+                                11
+                            </td>
+                            <td align="center" class="">
+                                12
+                            </td>
+                            <td align="center" class="">
+                                13
+                            </td>
+                            <td align="center" class="CalTodayDay">
+                                14
+                            </td>
+                            <td align="center" class="">
+                                15
+                            </td>
+                            <td align="center" class="">
+                                16
+                            </td>
+                            <td align="center" class="CalWeekendDay">
+                                17
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" class="CalWeekendDay">
+                                18
+                            </td>
+                            <td align="center" class="">
+                                19
+                            </td>
+                            <td align="center" class="">
+                                20
+                            </td>
+                            <td align="center" class="">
+                                21
+                            </td>
+                            <td align="center" class="">
+                                22
+                            </td>
+                            <td align="center" class="">
+                                23
+                            </td>
+                            <td align="center" class="CalWeekendDay">
+                                24
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" class="CalWeekendDay">
+                                25
+                            </td>
+                            <td align="center" class="">
+                                26
+                            </td>
+                            <td align="center" class="">
+                                27
+                            </td>
+                            <td align="center" class="">
+                                28
+                            </td>
+                            <td align="center" class="">
+                                29
+                            </td>
+                            <td align="center" class="">
+                                30
+                            </td>
+                            <td align="center" class="CalWeekendDay">
+                                31
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" class="CalOtherMonthDay">
+                                1
+                            </td>
+                            <td align="center" class="CalOtherMonthDay">
+                                2
+                            </td>
+                            <td align="center" class="CalOtherMonthDay">
+                                3
+                            </td>
+                            <td align="center" class="CalOtherMonthDay">
+                                4
+                            </td>
+                            <td align="center" class="CalOtherMonthDay">
+                                5
+                            </td>
+                            <td align="center" class="CalOtherMonthDay">
+                                6
+                            </td>
+                            <td align="center" class="CalOtherMonthDay">
+                                7
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <script>loadBlogDefaultCalendar();</script>
+
+                <div id="leftcontentcontainer">
+                    <div id="blog-sidecolumn">
+                        <!-- 搜索 -->
+                        <div class="sidebar-block" id="sidebar_search">
+                            <div class="mySearch" id="sidebar_search">
+                                <h3 class="catListTitle">搜索</h3>
+                                <div id="sidebar_search_box">
+                                    <div class="div_my_zzk" id="widget_my_zzk">
+                                        <input class="input_my_zzk" id="q" onkeydown="return zzk_go_enter(event);"
+                                               type="text">&nbsp;<input class="btn_my_zzk" id="btnZzk"
+                                                                        onclick="zzk_go()" type="button" value="找找看">
+                                    </div>
+                                    <div class="div_my_zzk" id="widget_my_google">
+                                        <input class="input_my_zzk" id="google_q" name="google_q"
+                                               onkeydown="return google_go_enter(event);" type="text">&nbsp;<input
+                                            class="btn_my_zzk" onclick="google_go()" type="button" value="谷歌搜索">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 常用链接 -->
+                        <div class="sidebar-block" id="sidebar_shortcut">
+                            <div class="catListLink">
+                                <h3 class="catListTitle">
+                                    常用链接
+                                </h3>
+                                <ul>
+
+                                    <li><a href="https://www.cnblogs.com/ligerleng/p/" title="我的博客的随笔列表">我的随笔</a></li>
+                                    <li><a href="https://www.cnblogs.com/ligerleng/MyComments.html" title="我的发表过的评论列表">我的评论</a>
+                                    </li>
+                                    <li><a href="https://www.cnblogs.com/ligerleng/OtherPosts.html" title="我评论过的随笔列表">我的参与</a>
+                                    </li>
+                                    <li><a href="https://www.cnblogs.com/ligerleng/RecentComments.html"
+                                           title="我的博客的评论列表">最新评论</a></li>
+                                    <li><a href="https://www.cnblogs.com/ligerleng/tag/" title="我的博客的标签列表">我的标签</a></li>
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                        <!-- 最新随笔 -->
+
+
+                        <!-- 我的标签 -->
+                        <div class="sidebar-block" id="sidebar_toptags">
+                            <div class="catListTag">
+                                <h3 class="catListTitle">我的标签</h3>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/ligerleng/tag/Chrome%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91/">Chrome扩展开发<span
+                                                class="tag-count">(6)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/ligerleng/tag/Gmail%20API/">Gmail API<span
+                                                class="tag-count">(2)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/ligerleng/tag/jQuery/">jQuery<span
+                                                class="tag-count">(1)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/ligerleng/tag/python/">python<span
+                                                class="tag-count">(1)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.cnblogs.com/ligerleng/tag/ajax/">ajax<span
+                                                class="tag-count">(1)</span></a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                        <!-- 积分与排名 -->
+
+
+                        <!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+                        <div id="sidebar_categories">
+
+                            <div class="catListPostArchive sidebar-block" id="sidebar_postarchive">
+                                <h3 class="catListTitle">
+
+                                    随笔档案
+
+
+                                </h3>
+
+
+                                <ul>
+
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/ligerleng/archive/2016/05.html" rel=""
+                                           target="">
+                                            2016年5月(1)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/ligerleng/archive/2016/02.html" rel=""
+                                           target="">
+                                            2016年2月(2)
+                                        </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://www.cnblogs.com/ligerleng/archive/2016/01.html" rel=""
+                                           target="">
+                                            2016年1月(4)
+                                        </a>
+
+
+                                    </li>
+
+                                </ul>
+
+
+                            </div>
+
+                        </div>
+
+                        <!-- 最新评论 -->
+                        <div class="sidebar-block" id="sidebar_recentcomments">
+                            <div class="catListComment">
+                                <h3 class="catListTitle">最新评论</h3>
+
+                                <div class="RecentCommentBlock">
+                                    <ul>
+                                        <li class="recent_comment_title"><a
+                                                href="https://www.cnblogs.com/ligerleng/p/gmail_assist_2.html">1.
+                                            Re:Chrome扩展开发之二——Chrome扩展中脚本的运行机制和通信方式</a></li>
+                                        <li class="recent_comment_body">确实讲得比较清晰，比较强</li>
+                                        <li class="recent_comment_author">--iceFrooooog</li>
+                                        <li class="recent_comment_title"><a
+                                                href="https://www.cnblogs.com/ligerleng/p/gmail_assist_2.html">2.
+                                            Re:Chrome扩展开发之二——Chrome扩展中脚本的运行机制和通信方式</a></li>
+                                        <li class="recent_comment_body">请问大神chrome的扩展和chrome
+                                            packaged_app之间如何进行通信啊，用runtime.sendMessage都不行,还是根本就不能进行通信.....
+                                        </li>
+                                        <li class="recent_comment_author">--李时珍di皮</li>
+                                        <li class="recent_comment_title"><a
+                                                href="https://www.cnblogs.com/ligerleng/p/gmail_assist_2.html">3.
+                                            Re:Chrome扩展开发之二——Chrome扩展中脚本的运行机制和通信方式</a></li>
+                                        <li class="recent_comment_body">@ 冰糖雪梨不加水不不不，我是说我没有完全验证过，哈哈哈...</li>
+                                        <li class="recent_comment_author">--韩子迟</li>
+                                        <li class="recent_comment_title"><a
+                                                href="https://www.cnblogs.com/ligerleng/p/gmail_assist_2.html">4.
+                                            Re:Chrome扩展开发之二——Chrome扩展中脚本的运行机制和通信方式</a></li>
+                                        <li class="recent_comment_body">@ 韩子迟我没验证过...但感觉应该不会有这样的限制啊...等有机会我再试试...</li>
+                                        <li class="recent_comment_author">--冰糖雪梨不加水</li>
+                                        <li class="recent_comment_title"><a
+                                                href="https://www.cnblogs.com/ligerleng/p/gmail_assist_2.html">5.
+                                            Re:Chrome扩展开发之二——Chrome扩展中脚本的运行机制和通信方式</a></li>
+                                        <li class="recent_comment_body">貌似 post 的不能跨域，get 的可以，在 content.js 中，没有完全验证</li>
+                                        <li class="recent_comment_author">--韩子迟</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- 阅读排行榜 -->
+                        <div class="sidebar-block" id="sidebar_topviewedposts">
+                            <div class="catListView">
+                                <h3 class="catListTitle">阅读排行榜</h3>
+                                <div id="TopViewPostsBlock">
+                                    <ul style="word-break:break-all">
+                                        <li>
+                                            <a href="https://www.cnblogs.com/ligerleng/p/gmail_assist_2.html">
+                                                1. Chrome扩展开发之二——Chrome扩展中脚本的运行机制和通信方式(11682)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.cnblogs.com/ligerleng/p/gmail_assist_3.html">
+                                                2. Chrome扩展开发之三——Chrome扩展中的数据本地存储和下载(10400)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.cnblogs.com/ligerleng/p/5484888.html">
+                                                3. pandas中计算总体标准差(6953)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.cnblogs.com/ligerleng/p/gmail_assist_1.html">
+                                                4. Chrome扩展开发之一——Chrome扩展的文件结构(5744)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.cnblogs.com/ligerleng/p/gmail_assist_5.html">
+                                                5. 采用指数退避算法实现ajax请求的重发，全部完成时触发回调函数(2205)
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!-- 评论排行榜 -->
+                        <div class="sidebar-block" id="sidebar_topcommentedposts">
+                            <div class="catListFeedback">
+                                <h3 class="catListTitle">评论排行榜</h3>
+                                <div id="TopFeedbackPostsBlock">
+                                    <ul style="word-break:break-all">
+                                        <li>
+                                            <a href="https://www.cnblogs.com/ligerleng/p/gmail_assist_2.html">
+                                                1. Chrome扩展开发之二——Chrome扩展中脚本的运行机制和通信方式(12)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.cnblogs.com/ligerleng/p/gmail_assist_5.html">
+                                                2. 采用指数退避算法实现ajax请求的重发，全部完成时触发回调函数(1)
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!-- 推荐排行榜 -->
+                        <div class="sidebar-block" id="sidebar_topdiggedposts">
+
+                            <div id="topdigg_posts_wrap">
+                                <div class="catListView">
+                                    <h3 class="catListTitle">推荐排行榜</h3>
+                                    <div id="TopDiggPostsBlock">
+                                        <ul style="word-break: break-all">
+                                            <li>
+                                                <a href="https://www.cnblogs.com/ligerleng/p/gmail_assist_1.html">
+                                                    1. Chrome扩展开发之一——Chrome扩展的文件结构(4)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.cnblogs.com/ligerleng/p/gmail_assist_3.html">
+                                                    2. Chrome扩展开发之三——Chrome扩展中的数据本地存储和下载(3)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.cnblogs.com/ligerleng/p/gmail_assist_5.html">
+                                                    3. 采用指数退避算法实现ajax请求的重发，全部完成时触发回调函数(1)
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.cnblogs.com/ligerleng/p/gmail_assist_2.html">
+                                                    4. Chrome扩展开发之二——Chrome扩展中脚本的运行机制和通信方式(1)
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>loadBlogSideColumn();</script>
+                </div>
+
+            </div><!--end: sideBarMain -->
+        </div><!--end: sideBar 侧边栏容器 -->
+        <div class="clear"></div>
+    </div><!--end: main -->
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+        Copyright © 2020 冰糖雪梨不加水
+        <br><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+    </div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+<div>
+    <div id="lvgo_memo_block">
+        www.cnblogs.com
+    </div>
+</div>
+</body>
+
+</body>
+<script>
+    // 只高亮一次
+    // 要匹配的关键词
+    var keywords = '这里简单理解为页面或站点之间请求资源所要遵循的格式即可。需要知道，请求有两种结果，一种成功，将在返回信息中附带值为200的状态码；而另一种失败，将根据不同的失败原因在返回信息中附上不同的状态码和具体的失败原因描述（比如最常见的404，页面不存在）。';
+    var patterns = hanldeKeyword(keywords);
+    // 针对body内容进行高亮
+    var bodyChildren = window.document.body.childNodes;
+    for (var i = 0; i < bodyChildren.length; i++) {
+        highlightKeyword(bodyChildren[i], patterns[0]);
+    }
+
+    //
+    // // 接着高亮其他关键词
+    // // 可能需要先抹掉不需要之前不需要高亮的
+    // keywords = 'World'; // 新关键词
+    // closeHighlight(patterns[1]);
+    // patterns = hanldeKeyword(keywords);
+    // // 针对新关键词高亮
+    // for (var i = 0; i < bodyChildren.length; i++) {
+    //     highlightKeyword(bodyChildren[i], patterns[0]);
+    // }
+</script>
+</html>

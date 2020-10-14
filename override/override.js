@@ -17,7 +17,7 @@ $("#translate-query").on('change keyup paste', () => {
     setTimeout(() => {
         translate($("#translate-query").val())
     }, 2000)
-})
+});
 
 function autoGrow(element) {
     element.style.height = (element.scrollHeight) + "px";
@@ -31,8 +31,8 @@ $("#translate_clear").on('click', () => {
 });
 
 function clearTranslateArea() {
-    $("#translate-query").val('')
-    $("#translate-result").text('')
+    $("#translate-query").val('');
+    $("#translate-result").text('');
 }
 
 $("#translate-button").on('click', () => {
@@ -75,9 +75,10 @@ function translate(query) {
             var result = data.trans_result;
             if (result && result.length === 1) {
                 var resultElement = result[0];
-                $("#translate-result").text(resultElement.dst);
+                var $translateResult = $("#translate-result");
+                $translateResult.text(resultElement.dst);
                 // 更多翻译
-                $("#translate-result").append(`<br><br><a style="font-size: 14px" target="_blank" href="https://fanyi.baidu.com/#zh/en/` + query + `">百度翻译 >>></a>`);
+                $translateResult.append(`<br><a style="font-size: 14px" target="_blank" href="https://fanyi.baidu.com/#zh/en/${query}">百度翻译 >>></a>`);
             }
         }
     });
