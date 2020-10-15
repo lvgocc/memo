@@ -1,5 +1,5 @@
-a {
-    cursor: pointer;
+a:hover {
+    color: #FD482C;
 }
 
 #memo-bg {
@@ -13,16 +13,18 @@ a {
     /*transform: scale(1.1);*/
 }
 
-#memo-bg::before {
+#bing-wallpaper-copyright {
     position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: all .2s;
+    bottom: 15px;
+    right: 15px;
+    background: #dcf2ff;
+    color: #000000;
+    font-size: 12px;
+    padding: 0 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #ffffff;
+    opacity: 0.6;
 }
-
 
 #memo {
     margin: 20px 200px 20px 200px;
@@ -37,7 +39,11 @@ a {
 #translate_query_area {
     padding: 10px;
     border: 1px solid #9F9F9F;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    z-index: 1;
 }
+
 
 #translate_query_area:hover {
     border: 1px solid #1E9FFF;
@@ -49,4 +55,5 @@ a {
     resize: none;
     width: 100%;
     overflow: hidden;
+    background: transparent;
 }

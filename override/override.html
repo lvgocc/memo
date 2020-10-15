@@ -2,27 +2,28 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>memo</title>
+    <title>备忘录：做懂你的 memo </title>
     <link rel="stylesheet" href="override.css">
     <link rel="stylesheet" href="../layui/css/layui.css">
     <script src="../js/md5.js"></script>
 </head>
-<body>
-<div id="memo-bg"></div>
+<body id="memo-bg">
 <div id="memo">
     <div class="layui-row ">
-        <div class="layui-col-xs12" id="translate_query_area">
-            <textarea id="translate-query" placeholder="输入文字开始翻译..."></textarea>
-            <button class="layui-btn layui-btn-xs  layui-btn-normal layui-btn-radius" id="translate-button"
-                    type="button">
-                <i class="layui-icon layui-icon-survey"></i>
-                翻译
-            </button>
-            <button class="layui-btn layui-btn-xs  layui-btn-normal layui-btn-radius" id="translate_clear"
-                    type="button"><i
-                    class="layui-icon layui-icon-close"></i>
-                清空
-            </button>
+        <div class="layui-col-xs12">
+            <div id="translate_query_area">
+                <textarea id="translate-query" placeholder="输入文字开始翻译..."></textarea>
+                <button class="layui-btn layui-btn-xs  layui-btn-normal layui-btn-radius" id="translate-button"
+                        type="button">
+                    <i class="layui-icon layui-icon-survey"></i>
+                    翻译
+                </button>
+                <button class="layui-btn layui-btn-xs  layui-btn-normal layui-btn-radius" id="translate_clear"
+                        type="button"><i
+                        class="layui-icon layui-icon-close"></i>
+                    清空
+                </button>
+            </div>
         </div>
         <div class="layui-col-xs12">
             <div id="translate-result"></div>
@@ -33,6 +34,8 @@
             </div>
         </div>
     </div>
+
+    <a id="bing-wallpaper-copyright" href="" target="_blank"></a>
 </div>
 <script src="../js/jquery-3.5.1.min.js"></script>
 <script src="../layui/layui.all.js"></script>

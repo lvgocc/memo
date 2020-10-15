@@ -105,7 +105,7 @@ chrome.browserAction.onClicked.addListener(function (tab) {
     // 在該 chrome tabs 上執行 contentScript.js 這隻檔案
     // chrome.tabs.executeScript(null, { file: 'contentScript.bundle.js' });
     chrome.tabs.create(
-        {url: 'chrome-extension://acikidmnacdkgfallhcflnbgkflefmdh/override/override.html'}
+        {url: 'chrome-extension://aapfajdhcgicmhdbojljfmlgkdpkolmm/override/override.html'}
     );
 });
 

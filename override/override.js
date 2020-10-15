@@ -175,10 +175,16 @@ chrome.storage.sync.get('firstTime', (result) => {
 
 function setMemoBg(data) {
     console.dir(data);
-    let bingImage = 'https://cn.bing.com' + data.images[0].url;
+    var wallpaper = data.images[0];
+    let bingImage = 'https://cn.bing.com' + wallpaper.url;
     var memoBg = document.getElementById('memo-bg');
     memoBg.style.height = $(window).height() + 'px';
     memoBg.style.backgroundImage = "url(" + bingImage + ")";
+
+    let $bingWallpaper = $('#bing-wallpaper-copyright');
+    $bingWallpaper.attr('href',wallpaper.copyrightlink);
+    $bingWallpaper.text(wallpaper.copyright);
+
 }
 
 // 扩展使用 bing 壁纸 https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1
