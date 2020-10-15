@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('google aHrefs is processed by lvgo memo , follow me https://github.com/lvgocc');
     }
     // 插入 memo 块
-    injectMemoBlock();
+    // injectMemoBlock();
 
     // 通过备忘录点击之后，跳转到备忘位置
     jumpTargetPosition();

@@ -16,7 +16,7 @@ $("#translate-query").on('change keyup paste', () => {
     }
     setTimeout(() => {
         translate($("#translate-query").val())
-    }, 2000)
+    }, 1000)
 });
 
 function autoGrow(element) {
